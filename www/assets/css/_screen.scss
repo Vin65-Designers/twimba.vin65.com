@@ -1,0 +1,1755 @@
+@charset "utf-8";
+@import "compass";
+
+
+/* CSS Document */
+/* ====================================================================================================
+	Table of Content
+	1. Theme Settings
+	2. Typography - Copy into admin.css
+	3. Header
+	4. Navigation
+		a. Navigation
+		b. Sub Navigation
+	
+	5. Content
+		a. Homepage Styles
+		b. Page Styles
+
+	6 Blog Template
+	7. Print Template
+	8. Buttons
+	9. Footer
+	10. Vin65 Overrides
+		a. User Tools
+		b. Homepage Product Group
+		c. Checkout Overrides
+		d. Default SASS Product List
+		e. Default SASS Product Drilldown
+*/
+
+//   ===================================================================================================
+//      1.a General Theme Settings
+// =====================================================================================================
+
+//   ===================================================================================================
+//	 Global Variables
+//   ===================================================================================================
+$backtoTopColor: #fff;
+$backtoTopBackground: #333;
+$backtoTopBorder: #ccc; 
+
+// ===============
+// General Styling
+// ===============
+///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #333; // Main Heading Color
+///$ruleColor: #666; // Horizontal Rule Color
+///$linkColor: #369; // Main Link Color
+///$backgroundColorMobileFooterTools: #000;
+
+// ==================
+// Header Styling
+// ==================
+///$headerBackgroundColor: #000; // Header Background Color
+///$headerTextColor: #fff; // Header Text Color
+///$headerLinkColor: #fff; // Header Link Color
+///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+///$logoBackgroundColor: #333; // Background Color for the Logo Element
+///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundColorReverse: #333333; // Website Background Color -Reverse 
+///$fontColorReverse: #cccccc;
+///$fontColorReverseHover: #fff;
+///$headingColorReverse: #fff; // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+///$navigationColor: #fff; // Main Navigation Color
+///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
+///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
+///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: #369;
+///$mainButtonBorder: 1px solid #163655;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #888;
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
+///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.b Muted Pastel Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+$fontColor: #000; // General Font Color
+$headingColor: #333; // Main Heading Color
+$ruleColor: #666; // Horizontal Rule Color
+$linkColor: #EE6557; // Main Link Color
+$backgroundColorMobileFooterTools: #000;
+$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Header Styling
+// ==================
+$headerBackgroundColor: #000; // Header Background Color
+$headerTextColor: #fff; // Header Text Color
+$headerLinkColor: #fff; // Header Link Color
+$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+$logoBackgroundColor: #333; // Background Color on the Logo in 'Desktop'
+$logoBorder: 4px solid #000; // Border on the Logo in 'Desktop'
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+$backgroundColorReverse: #fff; // Website Background Color -Reverse 
+$fontColorReverse: #333;
+$fontColorReverseHover: lighten($fontColorReverse, 20%);
+$headingColorReverse: #16A6B6; // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+$navigationColor: #fff; // Main Navigation Color
+$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
+$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
+$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+
+// ==================
+// Button Styling
+// ==================
+$mainButtonColor: #16A6B6;
+$mainButtonBorder: 1px solid #16A6B6;
+$altButtonColor: #ccc;
+$altButtonBorder: 1px solid #ccc;
+$mainButtonTextColor: #fff;
+$altButtonTextColor: #000;
+$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.c Blue Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+///$background: lighten(#0FACF3, 10%); // Background Color or Texture
+///$fontColor: darken(#0FACF3, 30%); // General Font Color
+///$headingColor: #000; // Main Heading Color
+///$ruleColor: darken(#0FACF3, 30%); // Horizontal Rule Color
+///$linkColor: #000; // Main Link Color
+///$backgroundColorMobileFooterTools: #000;
+///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Header Styling
+// ==================
+///$headerBackgroundColor: #000; // Header Background Color
+///$headerTextColor: #fff; // Header Text Color
+///$headerLinkColor: #fff; // Header Link Color
+///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+///$logoBackgroundColor: #333; // Background Color for the Logo Element
+///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundColorReverse: #fff; // Website Background Color -Reverse 
+///$fontColorReverse: #333;
+///$fontColorReverseHover: lighten($fontColorReverse, 20%);
+///$headingColorReverse: lighten(#0FACF3, 10%); // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+///$navigationColor: #fff; // Main Navigation Color
+///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
+///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
+///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: #000;
+///$mainButtonBorder: 1px solid #000;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #ccc;
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
+///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.d Blue Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+///$background: lighten(#8cac49, 10%); // Background Color or Texture
+///$fontColor: darken(#8cac49, 30%); // General Font Color
+///$headingColor: #000; // Main Heading Color
+///$ruleColor: darken(#8cac49, 30%); // Horizontal Rule Color
+///$linkColor: #000; // Main Link Color
+///$backgroundColorMobileFooterTools: #000;
+///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Header Styling
+// ==================
+///$headerBackgroundColor: #000; // Header Background Color
+///$headerTextColor: #fff; // Header Text Color
+///$headerLinkColor: #fff; // Header Link Color
+///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+///$logoBackgroundColor: #333; // Background Color for the Logo Element
+///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundColorReverse: #fff; // Website Background Color -Reverse 
+///$fontColorReverse: #333;
+///$fontColorReverseHover: lighten($fontColorReverse, 20%);
+///$headingColorReverse: lighten(#8cac49, 10%); // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+///$navigationColor: #fff; // Main Navigation Color
+///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
+///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
+///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: #000;
+///$mainButtonBorder: 1px solid #000;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #ccc;
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
+///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+
+//   ===================================================================================================
+//      1.e Green Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #51652A; // Main Heading Color
+///$ruleColor: #666; // Horizontal Rule Color
+///$linkColor: lighten(#51652A, 10%); // Main Link Color
+///$backgroundColorMobileFooterTools: #000;
+
+// ==================
+// Header Styling
+// ==================
+///$headerBackgroundColor: darken(#51652A, 10%); // Header Background Color
+///$headerTextColor: #fff; // Header Text Color
+///$headerLinkColor: #fff; // Header Link Color
+///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+///$logoBackgroundColor: #000; // Background Color for the Logo Element
+///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundColorReverse: darken(#51652A, 20%); // Website Background Color -Reverse 
+///$fontColorReverse: #fff;
+///$fontColorReverseHover: #fff;
+///$headingColorReverse: #fff; // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+///$navigationColor: #fff; // Main Navigation Color
+///$navigationColorHover: lighten(#51652A, 20%); // Main Navigation Hover Color
+///$navigationColorParent: lighten(#51652A, 20%); // Main Navigation Parent Color
+///$navigationColorSelected: lighten(#51652A, 20%); // Main Navigation Selected Color
+///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: lighten(#51652A, 20%);
+///$mainButtonBorder: 1px solid lighten(#51652A, 20%);
+///$altButtonColor: lighten(#51652A, 50%);
+///$altButtonBorder: 1px solid lighten(#51652A, 50%);
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
+///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.f Red Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #994C44; // Main Heading Color
+///$ruleColor: #666; // Horizontal Rule Color
+///$linkColor: lighten(#994C44, 10%); // Main Link Color
+///$backgroundColorMobileFooterTools: #000;
+
+// ==================
+// Header Styling
+// ==================
+///$headerBackgroundColor: darken(#994C44, 10%); // Header Background Color
+///$headerTextColor: #fff; // Header Text Color
+///$headerLinkColor: #fff; // Header Link Color
+///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
+///$logoBackgroundColor: #333; // Background Color for the Logo Element
+///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundColorReverse: darken(#994C44, 30%); // Website Background Color -Reverse 
+///$fontColorReverse: #fff;
+///$fontColorReverseHover: #fff;
+///$headingColorReverse: #fff; // Main Heading Color -Reverse 
+
+// ==================
+// Navigation Styling
+// ==================
+///$navigationColor: #fff; // Main Navigation Color
+///$navigationColorHover: lighten(#994C44, 20%); // Main Navigation Hover Color
+///$navigationColorParent: lighten(#994C44, 20%); // Main Navigation Parent Color
+///$navigationColorSelected: lighten(#994C44, 20%); // Main Navigation Selected Color
+///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: lighten(#994C44, 20%);
+///$mainButtonBorder: 1px solid lighten(#994C44, 20%);
+///$altButtonColor: lighten(#994C44, 50%);
+///$altButtonBorder: 1px solid lighten(#994C44, 50%);
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
+///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.c Responsive Breakpoints
+// =====================================================================================================
+
+$break-min-mobile: "and (min-width : 581px)";
+$break-max-mobile: "and (max-width : 580px)";
+$break-mobile: "and (min-width : 320px) and (max-width : 835px)";
+$break-min-tablet: "and (min-width : 836px)";
+$break-max-tablet: "and (max-width : 835px)";
+$break-tablet: "and (min-width : 581px) and (max-width : 1023px)";
+$break-max-desktop: "and (max-width : 1023px)";
+$break-min-desktop: "and (min-width : 1024px)";
+
+/* Breakpoints */
+/* Mobile 580px, resolutions 320 x 480 px, 320 x 580 px, 360 x 580 px */
+/* 7" Tablet 640px, resolution 640 x 1024 px */
+/* iPad 760px, resolution 760 x 1024 px */
+
+
+/*   ===================================================================================================
+     2. Typography - These get copied into the admin.css
+======================================================================================================== */
+
+body{
+	background: $background;
+	font-size: 12px;
+	color: $fontColor;
+	font-family: $fontFamily;
+	line-height: 1.5em;
+}
+
+a{ 
+	color: $linkColor;
+	text-decoration: none;
+	&:hover, &:focus, &:active{
+		text-decoration: underline;
+	}
+}
+
+h1,h2,h3,h4,h5,h6,p,table,ul,ol { 
+	margin-top: 0;
+	padding-top: 0;
+}
+
+ul, ol, dl, p, table, pre { 
+	margin-bottom: 1em;
+}
+
+#{headings(1,6)}{
+	color: $headingColor;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+	h1 { 
+		font-size: 48px;
+		line-height: 1.2;
+		margin-bottom: 0.6em;
+		font-weight: bold;
+
+		@media screen #{$break-max-mobile}{
+			font-size: 26px;
+		}
+	}
+
+	h2 { 
+		font-size: 36px;
+		line-height: 1.2;
+		margin: 0.25em  0 0.5em;
+		font-weight: bold;
+
+		@media screen #{$break-max-mobile}{
+			font-size: 22px;
+		}
+	}
+		
+	h3 { 
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 0.6em;
+
+		@media screen #{$break-max-mobile}{
+			font-size: 20px;
+		}
+	}
+		
+	h4 { 
+		font-size: 18px;
+		line-height: 1.2;
+	}
+		
+	h5 { 
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	h6 { 
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+img{
+	border:none;
+}
+
+form { 
+	margin-bottom: 1em;
+}
+	
+legend { 
+	color: $headingColor;
+}
+	
+hr { 
+	background-color: $ruleColor;
+	border: 0;
+	color: $ruleColor;
+	height: 1px;
+}
+
+.backtotop {
+	display: none;
+
+	@media screen and (max-width : 680px) {
+		position: fixed;
+		bottom: 1em;
+		right: 1em;
+		z-index: 900;
+
+		a {
+			color: $backtoTopColor;
+			background: $backtoTopBackground;
+			border: 1px solid $backtoTopBorder;
+			border-radius: 50%;
+			display: block;
+			line-height: 5em;
+			height: 5em;
+			width: 5em;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+	
+}
+
+/*   ===================================================================================================
+     3. Header
+======================================================================================================== */
+
+.headerWrapper{
+	margin: 0 auto;
+	position: fixed;
+	background-color:$headerBackgroundColor;
+	color:$headerTextColor;
+	width:100%;
+	z-index:100;
+	padding:0;
+
+	 @media screen #{$break-min-tablet}{
+		height:75px;
+	 }
+
+	a{
+		color:$headerLinkColor;
+	}
+}
+
+#user-tools{
+	color:$userToolsLinkColor;
+	border-bottom:1px solid #666;
+	@media screen #{$break-min-mobile}{
+		border:none;
+	}
+
+	@media screen #{$break-tablet}{
+		border: none;
+	}
+
+	a{
+		color:$userToolsLinkColor;
+
+		@media screen #{$break-min-tablet}{
+			color:$userToolsLinkColor;
+		}
+	}
+}
+
+.header{
+	width: 100%;
+	z-index: 100;
+	margin: 0 auto;
+	@media screen #{$break-min-tablet} {
+		position: relative;	
+	}
+	@media screen #{$break-min-desktop}{
+		width:950px;
+	}
+}
+
+header{
+	float: left;
+	height: 48px;
+	width:75px;
+	display:none;
+
+	@media screen #{$break-min-mobile}{
+		display:block;
+		position: absolute;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		height:75px;
+		width:120px;
+	}
+	@media screen #{$break-min-tablet}{
+		width: 250px;
+		height: 160px;
+		text-align:center;
+	}
+
+
+	.logo{
+		height: 100%;
+
+		img{
+			height: 100%;
+		}
+	}
+
+	.cart {
+		@media screen #{$break-max-mobile}{
+			display: none;
+		}
+	}
+}
+
+.logoWrapper{
+
+
+	border: $logoBorder;
+	background-color: $logoBackgroundColor;
+
+	@media screen #{$break-max-tablet}{
+		border: none;
+		background: none;
+	}
+
+	&.logoScroll{
+		height:75px;
+		width:120px;
+		border: none;
+		background: none;
+	}
+}
+
+.logoWrapper2{
+
+	border: none;
+	height:75px;
+	width:120px;
+
+}
+
+/*   ===================================================================================================
+     4. Navigation
+======================================================================================================== */
+	
+
+/* ----- Link to footer navigation ----- */
+	.menuLink {
+		display:none;
+			@media screen #{$break-max-tablet}{
+				color: #fff;
+				/*display: block;*/
+				float: left;
+				font-size: 16px;
+				height: 45px;
+				line-height: 45px;
+				padding-left: 15px;
+				}
+
+				&:hover, &:focus, &:active{
+					text-decoration: none;
+					}
+		}
+
+
+/* ----- a. Main Menu ----- */
+
+nav{
+	font-size: 13px;
+	height:100%;
+	width: 100%;
+	z-index: 101;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+		@media screen #{$break-max-tablet}{
+			text-align: center;
+			}
+		@media screen #{$break-tablet}{
+			float:right;
+			width: 65%;//640px
+			position: relative;
+			margin: 0 10px 0 0;
+			}
+		@media screen #{$break-min-desktop}{
+			float:right;
+			height: 24px;
+			width: 640px;
+			position: relative;
+			margin: 0;
+		}
+
+	ul{
+		margin: 0;
+		padding: 0;
+		display: inline;
+			@media screen #{$break-min-tablet}{
+				float:right;
+				margin:0;
+				text-align: left;
+			}
+
+		li{
+			margin: 0;
+			padding: 0;
+			height: 45px;
+			line-height: 45px;
+			display: inline-block;
+			@media screen #{$break-min-tablet}{
+				float:left;
+				height: 28px;
+				line-height: 28px;
+				margin: 0 25px;
+				margin: 0 0 0 35px;
+				position:relative;
+				display: inline;
+			}
+			@media screen #{$break-min-desktop}{
+				float:left;
+				margin: 0 0 0 55px;
+				position:relative;
+				display: inline;
+			}
+
+			a{
+				color: $navigationColor;
+				display:block;
+				height: 44px;
+				line-height: 44px;
+				margin: 0 3px;
+				padding: 0 3px;
+				position: relative;
+				text-decoration: none;
+				@media screen #{$break-min-tablet}{
+					height:32px;
+					line-height: 32px;
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					}
+
+				&:hover{
+					color: $navigationColorHover;
+					text-decoration: none;
+				}
+			}
+			// This template does not include dropdown
+			&:hover ul{
+			}
+			ul{
+
+				li{
+
+					a{
+
+						&:hover{
+						}
+					}
+				}
+			}
+			// This template does not include dropdown
+
+			/*home link is hidden for mobile*/
+			&.v65-home {
+				display: none;
+			}
+			&.v65-pageAParent{
+			}
+			&.v65-selected{
+			}
+		}
+	}
+}
+
+/* ----- b. Sub Menu ----- */
+.subMenu{
+	height:100%;
+	width: 100%;
+	clear: both;
+	@media screen #{$break-min-tablet}{
+		border-right: 1px solid #ccc;
+		float: left;
+		margin: 6% 4% 0 0; //60px 40px 0 0
+		padding-right: 2%; //20px
+		width: 17.8%; // 170px
+		clear: left;
+	}
+
+	ul{
+		margin:0;
+		padding:0;
+		list-style: none;
+		width: 100%; // 160px
+		@media screen #{$break-max-tablet}{
+			border-top:1px solid #999;
+		}	
+		@media screen #{$break-min-tablet}{
+			margin: 0 0 2% 1%; //0 0 1em 10px
+			padding: 0;
+			}
+		li{
+			margin:0;
+			padding:0;
+			@media screen #{$break-max-tablet}{
+				border-bottom:1px solid #999; 
+				text-align: center;
+			}
+			@media screen #{$break-min-desktop}{
+				line-height: 2;
+				display: list-item;
+			}
+
+			a{ 
+				@media screen #{$break-max-tablet}{
+					display:block;
+					font-size:1em; 
+					line-height:3em;
+				}
+
+
+				&:hover{
+
+				}
+			}
+			ul{
+				margin:0;
+				padding:0;
+				list-style: none;
+				width: 100%; // 160px
+				border-bottom:3px solid #CCC;		
+				@media screen #{$break-min-tablet}{
+					margin-left: 10px;
+					width: 160px;
+					border:none;
+				}		
+			}
+
+			.v65-pageAParent {
+				color: #000;
+			}
+			.v65-leftSelected{
+				color: #000;
+				font-weight: bold;
+			}
+		}
+	}
+
+	h3{
+		@media screen #{$break-max-tablet}{display:none;}
+	}
+}
+
+/* ----- Anchors ----- */
+
+.anchor{
+
+	margin-top:-20%;
+
+	@media screen #{$break-min-tablet}{
+		margin-top:-200px;
+	}
+}
+
+
+/*   ===================================================================================================
+     5. Content
+======================================================================================================== */
+
+.wrapper{
+	width:100%;
+	padding-top:28%;
+	padding-bottom:3%;
+	background: $background;
+
+	@media screen #{$break-min-mobile}{
+		padding-top:120px;
+		padding-bottom:30px;
+	}
+}
+
+/* ----- a. Homepage Styles ----- */
+
+/* ----- Feature Image ----- */
+
+#featureImage{
+
+	width: auto;
+	min-height: 100%;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000;
+	overflow:hidden;
+
+	@media screen #{$break-min-tablet}{
+		padding-top:0;
+	}
+
+	img{
+		width:100%;
+		height:auto;
+	}
+}
+
+
+/* ----- Wines Wrapper ----- */
+
+#winesWrapper{
+	width:100%;
+	background: $background;
+
+	@media screen #{$break-min-desktop}{
+		min-height: 660px;
+	}
+}
+
+.homepageContent{
+		width: 94%;
+		padding:7% 3%;
+		@media screen #{$break-min-tablet}{
+			padding:3%;		
+		}
+		@media screen #{$break-min-desktop}{
+			height: 100%;
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	.v65-productGroup-teaser{
+		  	display:none;
+		  	@media screen #{$break-min-tablet}{
+		  	display:block;
+		  	float: left;
+			width: 55%;
+			padding: 2%;
+		  	}
+		  	@media screen #{$break-min-desktop}{
+		  	float: left;
+			width: 470px;
+			padding: 0;
+			margin: 0 0 20px;
+		  	}
+	}
+
+
+	.v65-productGroup-title{
+		font-size: 48px;
+		line-height: 1.2;
+		margin: 0 0 0.6em;
+		font-weight: bold;
+		color: $headingColor;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}
+
+	.v65-productGroup-products{
+		float:left;
+	}
+
+
+	.homepageProductGroup {
+		clear:both; 
+		margin: 0;
+		padding:5px 0 0 0;
+		  	
+		 @media screen #{$break-min-desktop}{
+		  }
+
+		.v65-productGroup-product{
+			width:100%;
+			text-align: left;
+
+			@media screen #{$break-min-mobile}{
+				width:48%;
+			}
+			@media screen and (min-width:920px){
+				width:31%;
+			}	
+
+			.v65-product-photo {
+				width: 12%;
+				float:left;
+				text-align: left;
+				margin:0 1em 2em 0; 
+				@media screen #{$break-min-mobile}{
+					width: 28%;
+				}
+
+				@media screen and (min-width:920px){
+					width: 32%;
+					text-align: center;
+				}
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.v65-product-drilldownLink{
+				@media screen #{$break-max-mobile}{
+					display:none;
+				}
+			}
+
+			.v65-product-title{
+				font-size: 2em;
+				font-family: Georgia, "Times New Roman", Times, serif;
+				font-weight: bold;
+			}
+		}
+		.v65-product-addToCart-priceWrapper{
+			
+			@media screen #{$break-min-mobile}{
+				margin-top: 20px;
+			}
+		}
+
+		.v65-product-addToCart-price{
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+
+		.v65-addToCartCase{
+			@media screen #{$break-max-mobile}{
+				display:none;
+			}
+		}
+	}
+
+/* ----- Events Wrapper ----- */
+
+#eventsWrapper{
+	width:100%;
+	background-color: $backgroundColorReverse;
+	color: $fontColorReverse;
+
+	@media screen #{$break-min-desktop}{
+		min-height: 660px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $headingColorReverse;
+	}
+}
+
+.eventMainContent{
+	margin: 0;
+	padding: 2%;
+
+  	@media screen #{$break-min-tablet}{
+  		float: left;
+		width: 64%;
+		padding: 2%;
+  	}
+  	@media screen #{$break-min-desktop}{
+  		float: left;
+		width: 600px;
+		padding: 0;
+		margin: 0 0 20px;
+  	}
+}
+
+.eventRightContent{
+	margin: 0;
+	padding: 2%;
+	@media screen #{$break-min-tablet}{
+		float:right;
+		width:28%;
+		margin-top:8.5%;
+	}
+
+	@media screen #{$break-min-desktop}{
+		width:260px;
+		margin-top:53px;
+	}
+	.v65-pod{
+		margin-bottom:50px;
+		@media screen and (min-width : 480px) and (max-width : 767px){
+			width:35%;
+			float:left;
+			padding:0 7%;
+		}
+	}
+}
+
+/* ----- Club Wrapper ----- */
+
+#clubWrapper{
+	width:100%;
+	background: $background;
+
+	@media screen #{$break-min-desktop}{
+		min-height: 660px;
+	}
+}
+
+.clubMainContent {
+		  	margin: 0;
+		  	padding: 2%;
+		  	@media screen #{$break-min-tablet}{
+		  	float: left;
+			width: 44%;
+			padding: 2%;
+		  	}
+		  	@media screen #{$break-min-desktop}{
+		  	float: left;
+			width: 400px;
+			padding: 0;
+			margin: 0 0 20px;
+		  	}
+	}
+
+.clubRightContent{
+	margin: 0;
+	padding: 2%;
+	@media screen #{$break-min-tablet}{
+		float:right;
+		width:44%;
+		margin-top:11.5%;
+	}
+
+	@media screen #{$break-min-desktop}{
+		width:400px;
+		margin-top:85px;
+	}
+	.v65-pod{
+		margin-bottom:50px;
+	}
+}
+
+.v65-clubTitle{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: lowercase;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.v65-clubTeaser{
+	padding:0 0 12px 0;
+	margin-bottom: 50px;
+}
+
+
+/* ----- About Us Wrapper ----- */
+
+#aboutUsWrapper{
+	width:100%;
+	background-color: $backgroundColorReverse;
+	color: $fontColorReverse;
+
+	@media screen #{$break-min-tablet}{
+	}
+
+	@media screen #{$break-min-desktop}{
+		min-height: 660px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $headingColorReverse;
+	}
+}
+
+.aboutUsContent .v65-pod{
+	float:left;
+	margin: 0;
+	padding: 2%;
+	@media screen #{$break-min-mobile}{
+		float:left;
+		width:46%;
+	}
+	@media screen #{$break-min-tablet}{
+		width:21%;
+	}	
+}
+
+#slider{
+	overflow: hidden;
+	width: 100%;
+}
+
+/* ----- Contact Us Wrapper ----- */
+
+#contactWrapper{
+	width:100%;
+	background: $background;
+
+	@media screen #{$break-min-desktop}{
+		min-height: 600px;
+	}
+}
+
+.contactMainContent {
+		  	margin: 0;
+		  	padding: 2%;
+		  	@media screen #{$break-min-mobile}{
+		  	float: left;
+			width: 44%;
+			padding: 2%;
+		  	}
+		  	@media screen #{$break-min-desktop}{
+		  	float: left;
+			width: 400px;
+			padding: 0;
+			margin: 0 0 20px;
+		  	}
+	}
+
+.contactRightContent{
+
+	margin: 0;
+	padding: 2%;
+	@media screen #{$break-min-mobile}{
+		float:right;
+		width:44%;
+		margin-top:10%;
+	}
+
+	@media screen #{$break-min-desktop}{
+		width:400px;
+		margin-top:70px;
+	}
+	.v65-pod{
+		margin-bottom:50px;
+	}
+
+	.v65-form{
+		@media screen #{$break-max-desktop}{
+			width: 100% !important;
+		}
+	}
+
+	.v65-customForm{
+		@media screen #{$break-max-desktop}{
+			width: 100% !important;
+		}
+	}
+}
+
+
+/* ----- b. Page Styles ----- */
+
+	.content{
+		width: 100%;
+		margin: 0 auto;
+		@media screen #{$break-min-tablet}{
+			width:900px;
+			min-height: 820px;
+			padding:30px 30px 113px;
+		}
+	}
+
+	.contentWide{
+		background: #fff;
+		padding: 30px;
+		@media screen #{$break-max-tablet}{
+			box-shadow: none;
+			padding:3%;
+			border-top: 2px solid #CCC;
+
+		}
+
+		.subMenu{
+			@media screen #{$break-min-tablet}{
+				display:none;
+			}
+		}
+	}
+
+	.contentCart{
+		padding:0.2em;
+		width: 94%;
+		margin:0 auto;
+		@media screen #{$break-min-desktop}{
+			width:900px;
+		}
+	}
+
+	.pageContent{
+		float: right;
+		width: 75%; //650px
+			@media screen #{$break-max-tablet}{
+			width:94%;
+			padding:3%;
+			}
+	}
+
+
+
+/*   ===================================================================================================
+     6. Blog Template
+======================================================================================================== */
+
+	.blogContent{	
+		padding: 5%;
+		width: 90%;
+		@media screen #{$break-min-tablet}{
+		width: 65%;
+		padding: 5%;
+		float: left;
+		}
+		@media screen #{$break-min-desktop}{
+		width: 520px;
+		padding: 20px 25px 0 0;
+		float: left;
+		}
+	
+	}
+
+	.blogRightWrapper { 
+		display:none;
+		@media screen #{$break-min-tablet}{
+			display: block;
+			width: 20%;
+			padding: 20px 0 0 0;
+			float: right;
+		}
+		@media screen #{$break-min-desktop}{
+			float: right;
+			padding: 20px 0 0 0;
+			width: 325px;
+		}
+
+		ul{
+			list-style: none;
+			margin: 0 0 1em;
+			padding: 0;
+
+			li{
+				font-size: 11px;
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+
+	.blogFilterLeft {
+		display:none;
+		padding:0;
+		@media screen #{$break-min-tablet}{
+			width:auto;
+			display: block;
+		}
+		@media screen #{$break-min-desktop}{
+			display: block;
+			float: left;
+			padding: 0 25px 0 0;
+			width: 150px;
+		}			
+	}
+
+	.blogFilterRight { 
+		display:none;
+		@media screen #{$break-min-tablet}{
+			width:auto;
+			display: block;
+		} 
+		@media screen #{$break-min-desktop}{
+			display: block;
+			float: left;
+			width: 150px;
+		}		
+	}
+
+/*   ===================================================================================================
+     7. Print Template
+======================================================================================================== */
+
+.printBody { 
+}
+	
+.printWrapper { 
+
+}
+	
+	.printHeader { 
+		
+
+		img{
+				
+		}
+	}
+		
+	.printContent { 
+
+		}
+
+		#v65-cartTable{
+			
+			td{
+				
+			}
+		} 	
+
+/*   ===================================================================================================
+     8. Buttons
+======================================================================================================== */
+button{
+
+	/* Button Sizing Overrides*/
+
+	&.largeBtn, &.altLargeBtn{
+		font-size: 1.3em; /* 16px; */
+
+		@media screen #{$break-min-tablet}{
+			height: 3em;
+			line-height: 3em;
+		}
+	}
+
+	&.defaultBtn, &.altBtn{
+		font-size: 1em; /* 12px; */
+
+		@media screen #{$break-min-tablet}{
+			height: 3em;
+			line-height: 3em;
+		}
+	}
+	
+	&.modalBtn, &.altModalBtn{
+		font-size: 0.833em; /* 10px; */
+		
+		@media screen #{$break-min-tablet}{
+			height: 1.7em;
+			line-height: 1.7em;
+		}
+	}
+
+		/* Button Styling*/
+
+	&.defaultBtn,  &.modalBtn,  &.largeBtn{
+		background:$mainButtonColor;
+		border: $mainButtonBorder;
+		border-radius: 0.385em; // 5px;
+		color: $mainButtonTextColor;
+		text-align: center;
+		font-family: $fontFamilyButton;
+		min-width:9.0em;
+		text-transform: uppercase;
+		font-weight:bold;
+		span{
+			color: $mainButtonTextColor;
+			border-radius: 0.385em; // 5px;
+		}
+		&:hover{
+			background:lighten($mainButtonColor, 10%);
+			span{
+			}
+		}
+	}
+
+	&.altBtn, &.altModalBtn, &.altLargeBtn{
+		background:$altButtonColor;
+		border: $altButtonBorder;
+		border-radius: 0.385em; // 5px;
+		color: $altButtonTextColor;
+		font-family: $fontFamilyButton;
+		min-width:8.0em;
+		text-transform: uppercase;
+		font-weight:bold;
+		span{
+			color: $altButtonTextColor;
+			background: $altButtonColor;
+			border-radius: 0.385em; // 5px;
+		}
+		&:hover{
+			background: lighten($altButtonColor, 10%);
+			span{
+				background: lighten($altButtonColor, 10%);
+			}
+		}
+
+	}
+}
+
+a{
+	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn, &.fullWidthBtn{
+		background:$mainButtonColor;
+		border: $mainButtonBorder;
+		border-radius: 0.385em; // 5px;
+		color: $mainButtonTextColor;
+		text-align: center;
+		font-family: $fontFamilyButton;
+		min-width:8.0em;
+		text-transform: uppercase;
+		font-weight:bold;
+		span{
+			color: $mainButtonTextColor;
+			background:$mainButtonColor;
+			border-radius: 0.385em; // 5px;
+		}
+		&:hover{
+			background:lighten($mainButtonColor, 10%);
+			text-decoration: none;
+
+			span{
+				background:lighten($mainButtonColor, 10%);
+			}
+		}
+	}
+
+	&.fullWidthBtn{
+		display: block;
+		font-size: 16px;
+		max-width: 100%;
+		text-align: center;
+		width: 100%;
+	}
+
+	&.linkAltBtn, &.modalLinkAltBtn, &.modalLinkAltBtn{
+		background:$altButtonColor;
+		border: $altButtonBorder;
+		border-radius: 0.385em; // 5px;
+		font-family: $fontFamilyButton;
+		min-width:8.0em;
+		text-transform: uppercase;
+		font-weight:bold;
+		span{
+			background:$altButtonColor;
+			border-radius: 0.385em; // 5px;
+			color: $altButtonTextColor;
+		}
+		&:hover{
+			background: lighten($altButtonColor, 10%);
+			span{
+				background: lighten($altButtonColor, 10%);
+			}
+		}
+	}
+
+	&.modalLinkBtn, &.modalLinkAltBtn, &.modalLinkAltBtn{
+		min-width: auto;
+	}
+}
+
+/*   ===================================================================================================
+     9. Footer	
+======================================================================================================== */
+
+
+footer{
+	width:100%;
+	background-color: $backgroundColorReverse;
+	color: $fontColorReverse;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.footer{
+	width: 100%;
+	@media screen #{$break-min-tablet}{
+		color: $fontColorReverse;
+		padding: 1em 0;
+		text-align: center;
+		}
+
+		a{
+			color:$fontColorReverse;
+		}
+
+	}
+
+
+			
+		/* Footer Nav
+		-----------------------------------------------*/
+		.footerNav {
+			width: 100%;
+				@media screen #{$break-max-tablet}{
+					background: none;	
+				}  
+			
+
+			ul{ 
+				border-top: 3px solid #000;
+				list-style: none;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				@media screen #{$break-min-tablet}{
+					border: none;
+					text-align: center;	
+					} 
+
+				li{ 
+					border-bottom: 1px solid #000;
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					width: 100%;
+					@media screen #{$break-min-tablet}{
+						display: inline;
+						padding:0 5px;
+						border:none;
+						}
+
+					a{ 
+						font-size: 1em;
+						line-height: 3em;
+						display: block;
+						@media screen #{$break-min-tablet}{
+							color: $fontColorReverse;
+							display: inline-block;
+							font-size: 0.917em;
+							position: relative;
+							&:hover{
+							color: $fontColorReverseHover;
+							}  
+						}
+					}
+				}
+			}
+		} 
+
+		/* Mobile Footer Tools
+		-----------------------------------------------*/
+		.footerTools {
+			background: $backgroundColorMobileFooterTools;
+			width: 100%;
+
+			ul{ 
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				 	@media screen #{$break-min-tablet}{
+				 		border:none;
+				 	}
+
+				li{ 
+					line-height: 2.5em; 
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					width: 100%;
+						@media screen #{$break-min-tablet}{
+				 		border:none;
+				 		} 
+
+						img {
+							vertical-align:text-top;
+						}
+
+						a { 
+							line-height: 2.5em;
+							display: block;
+								@media screen #{$break-min-tablet}{
+									display:inline-block;
+								} 
+						} 
+
+					}
+
+				li.phone, li.email, li.map{
+					color: #555; 
+					@media screen #{$break-min-tablet}{
+						display:none;}
+					}
+
+				li.legal {
+					border-bottom: 0;
+					font-size: 0.875em;
+					line-height: 3em;
+						@media screen #{$break-max-tablet}{
+						color: #555;	
+						}
+						@media screen #{$break-min-tablet}{
+							float:left;
+							display: block;
+						}
+					}
+
+				li.accolade {
+					font-size: 0.875em;
+					line-height: 3em;
+						@media screen #{$break-max-tablet}{
+						color: #555;	
+						}
+						@media screen #{$break-min-tablet}{
+							float:left;
+							display: block;
+						}
+
+						a {
+							color: #555;
+							@media screen #{$break-min-tablet}{
+								color: #000;	
+							}	
+						}
+
+					}
+
+			}
+
+			 a{color: #ccc;
+				}
+
+		}
+
+
+/*   ===================================================================================================
+     10. Vin65 Overrides
+======================================================================================================== */
+
+.v65-socialMediaBar-Twitter{
+	width:59px;
+}
+
+ 
+.v65-product-addToCart-price{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+#v65-signUpClubSummaryWrapper {
+	margin-bottom: 20px;
+}
+
+
+/* ----- Fix for product sorting  ----- */
+
+
+.v65-product-sortBy { 
+	float: left; 
+	text-align: left; 
+	width: 50%;
+
+	form { 
+		padding: 0; 
+		margin: 0;
+
+		select { 
+			width: 130px; 
+		} 
+	} 
+}
+
+/* ----- Fix for overflow on FB sharing widget on mobile  ----- */
+
+.v65-socialMediaBar-FacebookLike { 
+	@media screen #{$break-max-tablet}{
+		width:100%;
+		overflow: hidden;
+		}
+	}
+
+.v65-productBadge {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+iframe{
+	@media screen #{$break-max-desktop}{
+		width: 100% !important;
+		height: 300px !important;
+	} 
+
+	@media screen #{$break-max-tablet}{
+		width: 100% !important;
+		height: 200px !important;
+	} 
+}
+
+.v65-form fieldset .formatBeside label{
+	@media screen #{$break-max-desktop}{
+		float: none;
+		width: auto;
+		text-align: left;
+		padding: 0;
+	}
+}
+
+.v65-border{
+	background-color:#fff;
+}
+
+	img.v65-right { 
+
+		@media screen and (max-width: 580px){
+			width: auto !important;	
+		}
+
+	}
