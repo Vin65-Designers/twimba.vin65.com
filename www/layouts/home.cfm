@@ -16,36 +16,43 @@
 	
 	<cf_js files="/assets/js/scripts.js,/assets/nivo/jquery.nivo.slider.pack.js">
 	
-	<cf_css files="/assets/nivo/nivo-slider.css,/assets/css/screen.min.css">
-	<!--[if lte IE 7]><cf_css files="/assets/css/ie7.css"><![endif]-->
-	<!--[if IE 8]><cf_css files="/assets/css/ie8.css"><![endif]-->
+	<link rel="stylesheet" href="//s3.amazonaws.com/assetss3.vin65.com/css/vin65-responsive.min.css" type="text/css">
 	
-	<!--//Respond.js is a polyfill so  media queries work on IE8 and older browers//-->  
-	<script src="/assets/js/respond.min.js"></script>
+	<cf_css files="/assets/nivo/nivo-slider.css,/assets/css/screen.min.css">
+	
+	<!--[if lte IE 9]>	
+		<!//Respond.js is a polyfill so  media queries work on IE8 and older browers//-->  
+		<script src="/assets/js/respond.min.js"></script>
+		<script src="/assets/js/html5shiv.js"></script>
+	<![endif]-->
 	
 </head>
 <body>
 
 <div class="headerWrapper v65-group">
 
+			<div class="backtotop">	
+				<a href="##"><i class="icon-up-bold"></i>TOP</a>
+			</div>
+
 	<!--header-->
 	<div class="header v65-group">
 
 		<!--user-tools-->
-		<div id="user-tools" class="v65-group">
+		<section id="user-tools" class="v65-group">
 			<cf_modalCart>	
 			<cf_login>
-		</div>
+		</section>
 		<!--/user-tools-->
 		
-		<!--logo-->
-		<div id="logoWrapper" class="v65-group">
+		<!--header-->
+		<header class="logoWrapper v65-group">
 			<a href="##Home" accesskey="h" class="logo"><img src="/assets/images/inverse-logo.png" alt="<cf_websiteName>"></a>
-		</div>
-		<!--/logo-->
+		</header>
+		<!--/header-->
 		
-		<!--mainMenu-->
-		<div class="mainMenu v65-group">
+		<!--nav-->
+		<nav class="v65-group">
 			<a href="##footerNav" class="menuLink">&##9776;</a>
 			<ul class="menu">
 				<li style="display:none;"><a href="##featureImage">Home</a></li>
@@ -55,8 +62,8 @@
 				<li><a href="##About">About</a></li>
 				<li><a href="##Contact">Contact</a></li>
 			</ul>
-		</div>
-		<!--/mainMenu-->
+		</nav>
+		<!--/nav-->
 		
 	</div>
 	<!--/header-->
@@ -64,73 +71,99 @@
 </div>
 
 <div id="featureImage" class="v65-group">
-<a name="Home"></a> 
+<a name="Home" class="anchor"></a> 
 	<img src="/assets/images/template/feature-image.jpg">
 </div>
 
 <div id="winesWrapper" class="v65-group">
-	<a name="Wines"></a> 
+	<a name="Wines" class="anchor"></a> 
 
 	<!--homepageContent-->
-	<div class="homepageContent v65-group">
-				
-		<div class="homepageText v65-group">
-			<cf_mainContent>
-		</div>
+	<section class="homepageContent v65-group">
+	
+		<article class="v65-group">
+			
+			<div class="homepageProductGroup v65-group">
+				<cf_product_group code="HomepageProductGroup">
+			</div>
+			
+		</article>
 		
-		<div class="homepageProductGroup v65-group">
-			<cf_product_group code="HomepageProductGroup">
-		</div>
-		
-	</div>
+	</section>
 	<!--/homepageContent-->
 	
 </div>
 
 <div id="eventsWrapper" class="v65-group">
-	<a name="Events"></a>
-		<div class="homepageContent v65-group">
-			<div class="eventMainContent v65-group">
-				<cf_pods location="Events Content" type="description"> 
-			</div>
-			<div class="eventRightContent v65-group">
-				<cf_pods location="Events Right Content" type="description"> 
-			</div>
-		</div>
+	<a name="Events" class="anchor"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="eventMainContent v65-group">
+					<cf_pods location="Events Content" type="description"> 
+				</div>
+				<div class="eventRightContent v65-group">
+					<cf_pods location="Events Right Content" type="description"> 
+				</div>
+			
+			</article>
+		
+		</section>
 </div>
 
 <div id="clubWrapper" class="v65-group">
-	<a name="Clubs"></a>
-		<div class="homepageContent v65-group">
-			<div class="clubMainContent v65-group">
-				<cf_pods location="Club Content" type="description"> 
-			</div>
-			<div class="clubRightContent v65-group">
-				<cf_pods location="Club Right Content" type="description"> 
-			</div> 
-		</div> 
+	<a name="Clubs" class="anchor"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="clubMainContent v65-group">
+					<cf_pods location="Club Content" type="description"> 
+				</div>
+				<div class="clubRightContent v65-group">
+					<cf_pods location="Club Right Content" type="description"> 
+				</div>
+				
+			</article>
+			 
+		</section> 
 </div>
 
 <div id="aboutUsWrapper" class="v65-group">
-	<a name="About"></a>
+	<a name="About" class="anchor"></a>
 	<div id="slider">
-		
 	</div>
+	
+	<section class="homepageContent v65-group">
+	
+		<div class="aboutUsContent v65-group">
+			<cf_pods location="About Us Photogallery" type="description"> 
+		</div>
+	
+	</section>
+	
 </div>
 
 <div id="contactWrapper" class="v65-group">
-	<a name="Contact"></a>
-		<div class="homepageContent v65-group">
-			<div class="contactMainContent v65-group">
-				<cf_pods location="Contact Us Content" type="description"> 
-			</div>
-			<div class="contactRightContent v65-group">
-				<cf_pods location="Contact Us Right Content" type="description"> 
-			</div>
-		</div>
+	<a name="Contact" class="anchor"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="contactMainContent v65-group">
+					<cf_pods location="Contact Us Content" type="description"> 
+				</div>
+				<div class="contactRightContent v65-group">
+					<cf_pods location="Contact Us Right Content" type="description"> 
+				</div>
+			
+			</article>
+			
+		</section> 
 </div>
 	
-<div class="wrapper v65-group">
+<footer class="v65-group">
 	
 	<!--footer-->
 	<div class="footer">
@@ -145,16 +178,16 @@
 		<!--footer_tool-->
 		<div class="footerTools"> 
 			<ul>
-				<li class="phone"><a href="tel:1-8999-999-9999">Call Us Toll Free: <strong>1-999-999-9999</strong> <img src="/assets/images/ico-call.png"></a></li>			
-				<li class="email"><a href="mailto:info@generic.com">info@generic.com</a></li>			
-				<li class="map"><a href="http://maps.google.com">Box 0000, City, State PostalCode <img src="/assets/images/ico-map.png"></a></li>
+				<li class="phone"><a href="tel:1-8999-999-9999"><i class="icon-phone-1"></i>Call Us Toll Free: <strong>1-999-999-9999</strong></a></li>			
+				<li class="email"><a href="mailto:info@generic.com"><i class="icon-mail"></i>info@generic.com</a></li>			
+				<li class="map"><a href="http://maps.google.com"><i class="icon-location"></i>Box 0000, City, State PostalCode</a></li>
 				<li class="legal"><cf_copyright></li>			
 				<li class="accolade"><cf_vin65Accolade></li>			
 			</ul>
 		</div>
 		<!--/footer_tools-->
 		
-</div>
+</footer>
 
 <cf_vin65GlobalFooterAssets>
 

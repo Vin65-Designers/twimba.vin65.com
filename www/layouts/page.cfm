@@ -14,48 +14,68 @@
 	
 	<cf_js files="/assets/js/scripts.js,/assets/nivo/jquery.nivo.slider.pack.js">
 	
-	<cf_css files="/assets/nivo/nivo-slider.css,/assets/css/screen.min.css">
-	<!--[if lte IE 7]><cf_css files="/assets/css/ie7.css"><![endif]-->
-	<!--[if IE 8]><cf_css files="/assets/css/ie8.css"><![endif]-->
+	<link rel="stylesheet" href="//s3.amazonaws.com/assetss3.vin65.com/css/vin65-responsive.min.css" type="text/css">
 	
-	<!--//Respond.js is a polyfill so  media queries work on IE8 and older browers//-->  
-	<script src="/assets/js/respond.min.js"></script>
+	<cf_css files="/assets/nivo/nivo-slider.css,/assets/css/screen.min.css">
+	
+	<!--[if lte IE 9]>	
+		<!//Respond.js is a polyfill so  media queries work on IE8 and older browers//-->  
+		<script src="/assets/js/respond.min.js"></script>
+		<script src="/assets/js/html5shiv.js"></script>
+	<![endif]-->
 
 </head>
 <body>
 
-<div class="wrapper v65-group">
+<div class="headerWrapper v65-group">
 
 	<!--header-->
-	<div class="header">
+	<div class="header v65-group">
 
 		<!--user-tools-->
-		<div id="user-tools">
+		<div id="user-tools" class="v65-group">
 			<cf_modalCart>	
 			<cf_login>
 		</div>
 		<!--/user-tools-->
 		
-		<!--logo-->
-		<a href="/" accesskey="h" class="logo"><img src="/assets/images/logo.png" alt="<cf_websiteName>"></a>
-		<!--/logo-->
+		<!--header-->
+		<header class="logoWrapper2 v65-group">
+			<a href="/" accesskey="h" class="logo"><img src="/assets/images/inverse-logo.png" alt="<cf_websiteName>"></a>
+		</header>
+		<!--/header-->
 		
-		<!--mainMenu-->
-		<div class="mainMenu">
+		<!--nav-->
+		<nav class="v65-group">
 			<a href="##footerNav" class="menuLink">&##9776;</a>
-			<cf_layoutHeaderNav depth="2">
-		</div>
-		<!--/mainMenu-->
+			<ul class="menu">
+				<li style="display:none;"><a href="##featureImage">Home</a></li>
+				<li><a href="/##Wines">Wines</a></li>
+				<li><a href="/##Events">Events</a></li>
+				<li><a href="/##Clubs">Clubs</a></li>
+				<li><a href="/##About">About</a></li>
+				<li><a href="/##Contact">Contact</a></li>
+			</ul>
+		</nav>
+		<!--/nav-->
 		
 	</div>
 	<!--/header-->
 	
+</div>
+
+<div class="wrapper v65-group">
+	
 	<!--content-->
 	<div class="content v65-group">
-		
-		<div class="pageContent">
-			<cf_mainContent>
+	
+		<div class="backtotop">	
+			<a href="##"><i class="icon-up-bold"></i>TOP</a>
 		</div>
+		
+		<article class="pageContent">
+			<cf_mainContent>
+		</article>
 		
 		<div class="subMenu">
 			<a name="footerNav"></a> 
@@ -65,13 +85,17 @@
 		
 	</div>
 	<!--/content-->
+
+</div>
+	
+<footer class="v65-group">
 	
 	<!--footer-->
 	<div class="footer">
 		
 		<!--footer_nav-->
-		<div class="footerNav"> 
-			<a name="footerNav"></a>
+		<div class="footerNav">
+			<a name="footerNav"></a> 
 			<cf_layoutFooterNav>
 		</div>
 		<!--/footer_nav-->
@@ -79,14 +103,16 @@
 		<!--footer_tool-->
 		<div class="footerTools"> 
 			<ul>
-				<li class="phone"><a href="tel:1-8999-999-9999">Call Us Toll Free: <strong>1-999-999-9999</strong> <img src="/assets/images/ico-call.png"></a></li>			
-				<li class="email"><a href="mailto:info@generic.com">info@generic.com</a></li>			
-				<li class="map"><a href="http://maps.google.com">Box 0000, City, State PostalCode <img src="/assets/images/ico-map.png"></a></li>
+				<li class="phone"><a href="tel:1-8999-999-9999"><i class="icon-phone-1"></i>Call Us Toll Free: <strong>1-999-999-9999</strong></a></li>			
+				<li class="email"><a href="mailto:info@generic.com"><i class="icon-mail"></i>info@generic.com</a></li>			
+				<li class="map"><a href="http://maps.google.com"><i class="icon-location"></i>Box 0000, City, State PostalCode</a></li>
 				<li class="legal"><cf_copyright></li>			
 				<li class="accolade"><cf_vin65Accolade></li>			
 			</ul>
 		</div>
-		<!--/footer_tools-->	
+		<!--/footer_tools-->
+		
+</footer>
 
 <cf_vin65GlobalFooterAssets>
 
