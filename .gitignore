@@ -1,2 +1,54 @@
-.sass-cache/
+###
+# ECLIPSE IDE project files
+##
+.project
+.cache
+.cache/*
+.settings
+.settings/*
+
+###
+# Dreamweaver
+###
+_notes
+
+###
+# system SWAP, TMP and BACKUP files
+###
+*~
+*.swp
+*.bak
+
+###
+# Windows
+###
+Thumbs.db
+
+###
+# Mac OS X directory preferences
+###
+.DS_Store
+*._
+
+###
+# Fusebox
+###
+parsed/
+
+###
+# System
+###
+
+settings.ini
 _gsdata_
+
+###
+# Sublime
+###
+
+sftp-config.json
+
+###
+#   SCSS Files
+###
+.sass-cache/*
