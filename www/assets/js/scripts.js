@@ -1,10 +1,8 @@
 ﻿var v65 = {
-
 	global : {
 		init : function(){
 			v65.global.addToCartListener();
 			v65.global.continueShopping();
-			v65.global.navHover();
 			v65.global.responsiveCleanUp();
 		},
 		addToCartListener : function(){
@@ -14,11 +12,6 @@
 		},
 		continueShopping : function(){
 			$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
-		},
-		navHover : function(){
-			$("nav ul li ul li a").hover(function(){
-				$(this).parent().parent().parent().children("a").toggleClass("hover");
-			});
 		},
 		responsiveCleanUp: function(){
 			var submenuItems = $('.subMenu ul li').length;
@@ -44,7 +37,6 @@
 			});
 		}
 	},
-
 	cookies : {
 		createCookie : function(name,value,days) {
 			var expires = "";
@@ -71,16 +63,22 @@
 			createCookie(name,"",-1);
 		}
 	},
-	
 	home : {
-		initPhotoGallery : function(){
-			if($("#slider").length){
-				$("#slider").v65PhotoGallery({
-					galleryHeight : null, // This changes the height of the homepage photogallery
-					galleryWidth : null, // This changes the width of the homepage photogallery
-					galleryId : "699344fd-9205-4085-9eab-f4fd56432cfa"	//	This is where you add the homepage photogallery id
-				});
-			}
+		ajaxContent : function(){
+			$(".v65-home").remove();
+
+			$("nav li a").each(function(){
+				var page = $(this).attr("href");
+				if(page === "/Wines"){
+					return;
+				} else{
+					var text = $(this).text(),
+						sectionTitle = text.replace(/\s/g, '');
+					console.log(sectionTitle);
+					$("footer").before('<section class="'+sectionTitle+'"></section>');
+					$("section."+sectionTitle).load(page + ' .homepageContent');
+				}
+			});
 		}
 	},
 	page : {
@@ -102,34 +100,36 @@
 	}
 }
 
-$(document).ready(function() {
-	v65.global.init();
-	v65.home.initPhotoGallery();
-	v65.page.initPhotoGallery();
+//Photogallery Plugin and Equalize Plugin
+;(function($,undefined){$.fn.v65PhotoGallery=function(options){var defaults={galleryId : $("#pagePhotoGallery").attr("v65jsphotogalleryid"),galleryHeight : $("#pagePhotoGallery").attr("v65jsphotogalleryheight"),galleryWidth : $("#pagePhotoGallery").attr("v65jsphotogallerywidth"),timestamp : "×tamp="+ new Date().getTime(),effect:'fade',slices:15, animSpeed:500,pauseTime:5000, startSlide:0, directionNav:true,directionNavHide:true,controlNav:true},gallery=$(this),settings=$.extend(defaults, options);gallery.html("").css({"height":settings.galleryHeight,"width":settings.galleryWidth,"overflow":"hidden"});$.ajax({type: "GET",url: "/index.cfm?method=pages.showPhotoGalleryXML&photogalleryid="+settings.galleryId+defaults.timestamp,dataType: "xml",success: function(xml){var images="";$(xml).find('img').each(function(){var location='/assets/images/photogallery/images/large/',photo=$(this).attr('src'),caption=$(this).attr('caption'),url=$(this).attr('link');if (url===undefined){images +='<img src="'+location+photo+'" title="'+caption+'"/>';}else{images +='<a href="'+url+'"><img src="'+location+photo+'" title="'+caption+'"/></a>';}});gallery.append(images);},complete: function(){gallery.nivoSlider({effect:settings.effect,slices:settings.slices,animSpeed:settings.animSpeed,pauseTime:settings.pauseTime,startSlide:settings.startSlide,directionNav:settings.directionNav,directionNavHide:settings.directionNavHide,controlNav:settings.controlNav});}});};$.fn.equalize=function(length){for(var i=0;i < this.length;i+=length){var elems=this.slice(i, i+length),equalizeArray=[];for(j=0;j < length;j++){equalizeArray.push(elems.eq(j).height());}var height=Math.max.apply( Math, equalizeArray);elems.css('min-height', height);}return this;};})(jQuery);
 
-	// Scroll to section on page load
-	var hash = window.location.hash, 
-		sectionName = hash.substring(1);
+v65.global.init();
+v65.home.ajaxContent();
+// v65.page.initPhotoGallery();
 
-	if(hash){
-		$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500)
+// Scroll to section on page load
+var hash = window.location.hash, 
+	sectionName = hash.substring(1);
+
+if(hash){
+	$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500)
+}
+
+// Scroll to section when nav link clicked
+$(".menu a").click(function(){
+	var sectionName = $(this).attr("href").substring(1), href = $(this).attr("href");
+	if(href.indexOf("#") > -1){
+		$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500);
 	}
-
-	// Scroll to section when nav link clicked
-	$(".menu a").click(function(){
-		var sectionName = $(this).attr("href").substring(1), href = $(this).attr("href");
-		if(href.indexOf("#") > -1){
-			$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500);
-		}
-	});
-
-	$("a[href='#Home']").click(function(){
-		$("html,body").animate({ scrollTop: 0 }, 500);
-	});
-
 });
 
+$("a[href='#Home']").click(function(){
+	$("html,body").animate({ scrollTop: 0 }, 500);
+});
+
+
 $(window).load(function () {
+	v65.page.initPhotoGallery();
 
 	if($(document).width() >= 580){
 		$(window).scroll(function () {
@@ -148,61 +148,3 @@ $(window).load(function () {
     	});
 	}
 });
-
-;(function($,undefined){
-	$.fn.v65PhotoGallery = function(options){
-		var defaults = {
-			galleryId : $("#pagePhotoGallery").attr("v65jsphotogalleryid"),
-			galleryHeight : $("#pagePhotoGallery").attr("v65jsphotogalleryheight"),
-			galleryWidth : $("#pagePhotoGallery").attr("v65jsphotogallerywidth"),
-			timestamp : "&timestamp="+ new Date().getTime(),
-			effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
-			slices:15, // For slice animations
-			animSpeed:500, // Slide transition speed
-			pauseTime:5000, // How long each slide will show
-			startSlide:0, // Set starting Slide (0 index)
-			directionNav:true, // Next & Prev navigation
-			directionNavHide:true, // Only show on hover
-			controlNav:true // 1,2,3... navigation
-		},
-		gallery = $(this),
-		settings = $.extend(defaults, options);
-		gallery.html("").css({
-			"height":settings.galleryHeight,
-			"width":settings.galleryWidth,
-			"overflow":"hidden"
-		});
-		$.ajax({
-	    		type: "GET",
-			url: "/index.cfm?method=pages.showPhotoGalleryXML&photogalleryid="+settings.galleryId+defaults.timestamp,
-			dataType: "xml",
-			success: function(xml) {
-				var images = "";
-				$(xml).find('img').each(function() {
-					var location = '/assets/images/photogallery/images/large/',
-						photo = $(this).attr('src'),
-						caption = $(this).attr('caption'),
-						url = $(this).attr('link');
-					if (url === undefined) {
-						images += '<img src="'+location+photo+'" title="'+caption+'"/>';
-					} else{
-						images += '<a href="'+url+'"><img src="'+location+photo+'" title="'+caption+'"/></a>';
-					}
-				});
-				gallery.append(images);
-			},
-			complete: function(){
-	   			gallery.nivoSlider({
-					effect:settings.effect, // Specify sets like: 'fold,fade,sliceDown'
-					slices:settings.slices, // For slice animations
-					animSpeed:settings.animSpeed, // Slide transition speed
-					pauseTime:settings.pauseTime, // How long each slide will show
-					startSlide:settings.startSlide, // Set starting Slide (0 index)
-					directionNav:settings.directionNav, // Next & Prev navigation
-					directionNavHide:settings.directionNavHide, // Only show on hover
-					controlNav:settings.controlNav // 1,2,3... navigation
-				});
-	   		}
-	   	});
-	}
-})(jQuery);
