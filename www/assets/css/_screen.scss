@@ -1010,9 +1010,15 @@ nav{
 
 /* ----- Two Col Layout ----- */
 
-.leftCol{
-	margin: 0;
+.leftCol, .rightCol{
+	&.equalWidth{
+		@media screen #{$break-min-tablet}{
+			width: 45%;
+		}
+	}
+}
 
+.leftCol{
   	@media screen #{$break-min-tablet}{
   		float: left;
 		width: 68%;
@@ -1027,8 +1033,6 @@ nav{
 }
 
 .rightCol{
-	margin: 0;
-
 	@media screen #{$break-min-tablet}{
 		float:right;
 		width:28%;
@@ -1049,6 +1053,18 @@ nav{
 	}
 }
 
+.equalWidth{
+	.v65-pod{
+		margin-bottom:50px;
+
+		@media screen and (min-width : 480px) and (max-width : 767px){
+			width:100%;
+			float:none;
+			padding:2% 0 0;
+		}
+	}
+}
+
 /* ----- Club Wrapper ----- */
 
 #clubWrapper{
@@ -1061,20 +1077,22 @@ nav{
 }
 
 .clubMainContent {
-		  	margin: 0;
-		  	padding: 2%;
-		  	@media screen #{$break-min-tablet}{
-		  	float: left;
-			width: 44%;
-			padding: 2%;
-		  	}
-		  	@media screen #{$break-min-desktop}{
-		  	float: left;
-			width: 400px;
-			padding: 0;
-			margin: 0 0 20px;
-		  	}
+	margin: 0;
+	padding: 2%;
+
+	@media screen #{$break-min-tablet}{
+		float: left;
+		width: 44%;
+		padding: 2%;
 	}
+
+	@media screen #{$break-min-desktop}{
+		float: left;
+		width: 400px;
+		padding: 0;
+		margin: 0 0 20px;
+	}
+}
 
 .clubRightContent{
 	margin: 0;
@@ -1710,6 +1728,8 @@ footer{
 }
 
 iframe{
+	max-width: 100% !important;
+
 	@media screen #{$break-max-desktop}{
 		width: 100% !important;
 		height: 300px !important;

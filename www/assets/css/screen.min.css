@@ -1308,9 +1308,12 @@ nav ul li.v65-home {
 }
 
 /* ----- Two Col Layout ----- */
-.leftCol {
-  margin: 0;
+@media screen and (min-width: 836px) {
+  .leftCol.equalWidth, .rightCol.equalWidth {
+    width: 45%;
+  }
 }
+
 @media screen and (min-width: 836px) {
   .leftCol {
     float: left;
@@ -1326,9 +1329,6 @@ nav ul li.v65-home {
   }
 }
 
-.rightCol {
-  margin: 0;
-}
 @media screen and (min-width: 836px) {
   .rightCol {
     float: right;
@@ -1348,6 +1348,17 @@ nav ul li.v65-home {
     width: 35%;
     float: left;
     padding: 0 7%;
+  }
+}
+
+.equalWidth .v65-pod {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .equalWidth .v65-pod {
+    width: 100%;
+    float: none;
+    padding: 2% 0 0;
   }
 }
 
@@ -1991,6 +2002,9 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   left: 0;
 }
 
+iframe {
+  max-width: 100% !important;
+}
 @media screen and (max-width: 1023px) {
   iframe {
     width: 100% !important;
