@@ -752,6 +752,9 @@ h2 {
   margin: 0.25em  0 0.5em;
   font-weight: bold;
 }
+h2.pageTitle {
+  text-transform: lowercase;
+}
 @media screen and (max-width: 580px) {
   h2 {
     font-size: 22px;
@@ -827,25 +830,49 @@ hr {
   }
 }
 
+.hideText {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.hideText a {
+  display: block;
+  height: 100%;
+}
+
 /*   ===================================================================================================
      3. Header
 ======================================================================================================== */
-.headerWrapper {
-  margin: 0 auto;
-  position: fixed;
+header.main {
   background-color: black;
   color: white;
+  position: fixed;
   width: 100%;
   z-index: 100;
-  padding: 0;
 }
 @media screen and (min-width: 836px) {
-  .headerWrapper {
+  header.main {
     height: 75px;
   }
 }
-.headerWrapper a {
+header.main a {
   color: white;
+}
+header.main .wrapper {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 950px;
+}
+@media screen and (min-width: 836px) {
+  header.main .wrapper {
+    position: relative;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header.main .wrapper {
+    width: 950px;
+  }
 }
 
 #user-tools {
@@ -865,36 +892,29 @@ hr {
 #user-tools a {
   color: #b3b3b3;
 }
-@media screen and (min-width: 836px) {
-  #user-tools a {
-    color: #b3b3b3;
-  }
-}
 
-.header {
-  width: 100%;
-  z-index: 100;
-  margin: 0 auto;
-}
-@media screen and (min-width: 836px) {
-  .header {
-    position: relative;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header {
-    width: 950px;
-  }
-}
-
-header {
+.logo {
+  background: url('../images/inverse-logo.png?1370023199') no-repeat;
+  background-color: #333333;
+  background-size: contain;
+  border: 4px solid black;
+  display: none;
   float: left;
   height: 48px;
   width: 75px;
-  display: none;
+}
+.logo.smallLogo {
+  background-color: transparent;
+  border: none;
+  height: 75px;
+  width: 120px;
+}
+.logo h1 {
+  margin: 0;
+  height: 100%;
 }
 @media screen and (min-width: 581px) {
-  header {
+  .logo {
     display: block;
     position: absolute;
     z-index: 100;
@@ -905,22 +925,14 @@ header {
   }
 }
 @media screen and (min-width: 836px) {
-  header {
+  .logo {
     width: 250px;
     height: 160px;
     text-align: center;
   }
 }
-header .logo {
+.logo img {
   height: 100%;
-}
-header .logo img {
-  height: 100%;
-}
-@media screen and (max-width: 580px) {
-  header .cart {
-    display: none;
-  }
 }
 
 .logoWrapper {
@@ -1017,25 +1029,20 @@ nav ul li {
   height: 45px;
   line-height: 45px;
   display: inline-block;
-  /*home link is hidden for mobile*/
 }
 @media screen and (min-width: 836px) {
   nav ul li {
-    float: left;
     height: 28px;
     line-height: 28px;
     margin: 0 25px;
     margin: 0 0 0 35px;
     position: relative;
-    display: inline;
   }
 }
 @media screen and (min-width: 1024px) {
   nav ul li {
-    float: left;
     margin: 0 0 0 55px;
     position: relative;
-    display: inline;
   }
 }
 nav ul li a {
@@ -1067,9 +1074,9 @@ nav ul li.v65-home {
 
 /* ----- b. Sub Menu ----- */
 .subMenu {
+  clear: both;
   height: 100%;
   width: 100%;
-  clear: both;
 }
 @media screen and (min-width: 836px) {
   .subMenu {
@@ -1162,34 +1169,40 @@ nav ul li.v65-home {
      5. Content
 ======================================================================================================== */
 .wrapper {
-  width: 100%;
+  margin: 0 auto;
+  padding: 3%;
+  position: relative;
+  height: 100%;
+  max-width: 900px;
+}
+.wrapper.innerContent {
+  padding-bottom: 0;
   padding-top: 28%;
-  padding-bottom: 3%;
-  background: url(../images/template/bg-texture.jpg) top center repeat #dedede;
 }
 @media screen and (min-width: 581px) {
-  .wrapper {
-    padding-top: 120px;
+  .wrapper.innerContent {
     padding-bottom: 30px;
+    padding-top: 120px;
   }
 }
 
 /* ----- a. Homepage Styles ----- */
 /* ----- Feature Image ----- */
-#featureImage {
-  width: auto;
-  min-height: 100%;
-  text-align: center;
-  margin: 0 auto;
+.featureImage {
   background-color: #000;
+  line-height: 0;
+  margin: 0 auto;
+  min-height: 100%;
   overflow: hidden;
+  text-align: center;
+  width: auto;
 }
 @media screen and (min-width: 836px) {
-  #featureImage {
+  .featureImage {
     padding-top: 0;
   }
 }
-#featureImage img {
+.featureImage img {
   width: 100%;
   height: auto;
 }
@@ -1205,28 +1218,19 @@ nav ul li.v65-home {
   }
 }
 
-.homepageContent {
-  width: 94%;
-  padding: 7% 3%;
+.wine .v65-productGroup-title {
+  color: #333333;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
 }
-@media screen and (min-width: 836px) {
-  .homepageContent {
-    padding: 3%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .homepageContent {
-    height: 100%;
-    width: 900px;
-    margin: 0 auto;
-  }
-}
-
-.v65-productGroup-teaser {
+.wine .v65-productGroup-teaser {
   display: none;
 }
 @media screen and (min-width: 836px) {
-  .v65-productGroup-teaser {
+  .wine .v65-productGroup-teaser {
     display: block;
     float: left;
     width: 55%;
@@ -1234,119 +1238,87 @@ nav ul li.v65-home {
   }
 }
 @media screen and (min-width: 1024px) {
-  .v65-productGroup-teaser {
+  .wine .v65-productGroup-teaser {
     float: left;
     width: 470px;
     padding: 0;
     margin: 0 0 20px;
   }
 }
-
-.v65-productGroup-title {
-  font-size: 48px;
-  line-height: 1.2;
-  margin: 0 0 0.6em;
-  font-weight: bold;
-  color: #333333;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.v65-productGroup-products {
-  float: left;
-}
-
-.homepageProductGroup {
+.wine .v65-productGroup-products {
   clear: both;
-  margin: 0;
-  padding: 5px 0 0 0;
 }
-.homepageProductGroup .v65-productGroup-product {
-  width: 100%;
+.wine .v65-productGroup-product {
   text-align: left;
+  width: 100%;
 }
 @media screen and (min-width: 581px) {
-  .homepageProductGroup .v65-productGroup-product {
+  .wine .v65-productGroup-product {
     width: 48%;
   }
 }
 @media screen and (min-width: 920px) {
-  .homepageProductGroup .v65-productGroup-product {
+  .wine .v65-productGroup-product {
     width: 31%;
   }
 }
-.homepageProductGroup .v65-productGroup-product .v65-product-photo {
+.wine .v65-productGroup-product .v65-product-photo {
   width: 12%;
   float: left;
   text-align: left;
   margin: 0 1em 2em 0;
 }
 @media screen and (min-width: 581px) {
-  .homepageProductGroup .v65-productGroup-product .v65-product-photo {
+  .wine .v65-productGroup-product .v65-product-photo {
     width: 28%;
   }
 }
 @media screen and (min-width: 920px) {
-  .homepageProductGroup .v65-productGroup-product .v65-product-photo {
-    width: 32%;
+  .wine .v65-productGroup-product .v65-product-photo {
     text-align: center;
+    width: 32%;
   }
 }
-.homepageProductGroup .v65-productGroup-product .v65-product-photo img {
+.wine .v65-productGroup-product .v65-product-photo img {
   max-width: 100%;
 }
 @media screen and (max-width: 580px) {
-  .homepageProductGroup .v65-productGroup-product .v65-product-drilldownLink {
+  .wine .v65-productGroup-product .v65-product-drilldownLink {
     display: none;
   }
 }
-.homepageProductGroup .v65-productGroup-product .v65-product-title {
+.wine .v65-productGroup-product .v65-product-title {
   font-size: 2em;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
 @media screen and (min-width: 581px) {
-  .homepageProductGroup .v65-product-addToCart-priceWrapper {
+  .wine .v65-product-addToCart-priceWrapper {
     margin-top: 20px;
   }
 }
-.homepageProductGroup .v65-product-addToCart-price {
+.wine .v65-product-addToCart-price {
   font-size: 1.6em;
   font-weight: bold;
 }
 @media screen and (max-width: 580px) {
-  .homepageProductGroup .v65-addToCartCase {
+  .wine .v65-addToCartCase {
     display: none;
   }
 }
 
-/* ----- Events Wrapper ----- */
-#eventsWrapper {
-  width: 100%;
-  background-color: white;
-  color: #333333;
-}
-@media screen and (min-width: 1024px) {
-  #eventsWrapper {
-    min-height: 660px;
-  }
-}
-#eventsWrapper h1, #eventsWrapper h2, #eventsWrapper h3, #eventsWrapper h4, #eventsWrapper h5, #eventsWrapper h6 {
-  color: #16a6b6;
-}
-
-.eventMainContent {
+/* ----- Two Col Layout ----- */
+.leftCol {
   margin: 0;
-  padding: 2%;
 }
 @media screen and (min-width: 836px) {
-  .eventMainContent {
+  .leftCol {
     float: left;
-    width: 64%;
-    padding: 2%;
+    width: 68%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .eventMainContent {
+  .leftCol {
     float: left;
     width: 600px;
     padding: 0;
@@ -1354,28 +1326,25 @@ nav ul li.v65-home {
   }
 }
 
-.eventRightContent {
+.rightCol {
   margin: 0;
-  padding: 2%;
 }
 @media screen and (min-width: 836px) {
-  .eventRightContent {
+  .rightCol {
     float: right;
     width: 28%;
-    margin-top: 8.5%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .eventRightContent {
+  .rightCol {
     width: 260px;
-    margin-top: 53px;
   }
 }
-.eventRightContent .v65-pod {
+.rightCol .v65-pod {
   margin-bottom: 50px;
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .eventRightContent .v65-pod {
+  .rightCol .v65-pod {
     width: 35%;
     float: left;
     padding: 0 7%;
@@ -1575,25 +1544,25 @@ nav ul li.v65-home {
   }
 }
 
-.contentCart {
+.wide {
   padding: 0.2em;
   width: 94%;
   margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
-  .contentCart {
+  .wide {
     width: 900px;
   }
 }
 
-.pageContent {
+.page {
   float: right;
   width: 75%;
 }
 @media screen and (max-width: 835px) {
-  .pageContent {
-    width: 94%;
+  .page {
     padding: 3%;
+    width: 94%;
   }
 }
 
