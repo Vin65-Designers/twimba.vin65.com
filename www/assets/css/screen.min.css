@@ -1186,7 +1186,6 @@ nav ul li.v65-home {
   }
 }
 
-/* ----- a. Homepage Styles ----- */
 /* ----- Feature Image ----- */
 .featureImage {
   background-color: #000;
@@ -1205,106 +1204,6 @@ nav ul li.v65-home {
 .featureImage img {
   width: 100%;
   height: auto;
-}
-
-/* ----- Wines Wrapper ----- */
-#winesWrapper {
-  width: 100%;
-  background: url(../images/template/bg-texture.jpg) top center repeat #dedede;
-}
-@media screen and (min-width: 1024px) {
-  #winesWrapper {
-    min-height: 660px;
-  }
-}
-
-.wine .v65-productGroup-title {
-  color: #333333;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0 0 0.6em;
-}
-.wine .v65-productGroup-teaser {
-  display: none;
-}
-@media screen and (min-width: 836px) {
-  .wine .v65-productGroup-teaser {
-    display: block;
-    float: left;
-    width: 55%;
-    padding: 2%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .wine .v65-productGroup-teaser {
-    float: left;
-    width: 470px;
-    padding: 0;
-    margin: 0 0 20px;
-  }
-}
-.wine .v65-productGroup-products {
-  clear: both;
-}
-.wine .v65-productGroup-product {
-  text-align: left;
-  width: 100%;
-}
-@media screen and (min-width: 581px) {
-  .wine .v65-productGroup-product {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 920px) {
-  .wine .v65-productGroup-product {
-    width: 31%;
-  }
-}
-.wine .v65-productGroup-product .v65-product-photo {
-  width: 12%;
-  float: left;
-  text-align: left;
-  margin: 0 1em 2em 0;
-}
-@media screen and (min-width: 581px) {
-  .wine .v65-productGroup-product .v65-product-photo {
-    width: 28%;
-  }
-}
-@media screen and (min-width: 920px) {
-  .wine .v65-productGroup-product .v65-product-photo {
-    text-align: center;
-    width: 32%;
-  }
-}
-.wine .v65-productGroup-product .v65-product-photo img {
-  max-width: 100%;
-}
-@media screen and (max-width: 580px) {
-  .wine .v65-productGroup-product .v65-product-drilldownLink {
-    display: none;
-  }
-}
-.wine .v65-productGroup-product .v65-product-title {
-  font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-@media screen and (min-width: 581px) {
-  .wine .v65-product-addToCart-priceWrapper {
-    margin-top: 20px;
-  }
-}
-.wine .v65-product-addToCart-price {
-  font-size: 1.6em;
-  font-weight: bold;
-}
-@media screen and (max-width: 580px) {
-  .wine .v65-addToCartCase {
-    display: none;
-  }
 }
 
 /* ----- Two Col Layout ----- */
@@ -1362,58 +1261,25 @@ nav ul li.v65-home {
   }
 }
 
-/* ----- Club Wrapper ----- */
-#clubWrapper {
-  width: 100%;
-  background: url(../images/template/bg-texture.jpg) top center repeat #dedede;
-}
-@media screen and (min-width: 1024px) {
-  #clubWrapper {
-    min-height: 660px;
-  }
-}
-
-.clubMainContent {
+/* ----- Four Col layout ----- */
+.fourCol .v65-pod {
+  float: left;
   margin: 0;
   padding: 2%;
 }
-@media screen and (min-width: 836px) {
-  .clubMainContent {
+@media screen and (min-width: 581px) {
+  .fourCol .v65-pod {
     float: left;
-    width: 44%;
-    padding: 2%;
+    width: 46%;
   }
 }
-@media screen and (min-width: 1024px) {
-  .clubMainContent {
-    float: left;
-    width: 400px;
-    padding: 0;
-    margin: 0 0 20px;
+@media screen and (min-width: 836px) {
+  .fourCol .v65-pod {
+    width: 21%;
   }
 }
 
-.clubRightContent {
-  margin: 0;
-  padding: 2%;
-}
-@media screen and (min-width: 836px) {
-  .clubRightContent {
-    float: right;
-    width: 44%;
-    margin-top: 11.5%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .clubRightContent {
-    width: 400px;
-    margin-top: 85px;
-  }
-}
-.clubRightContent .v65-pod {
-  margin-bottom: 50px;
-}
-
+/* ----- Clubs ----- */
 .v65-clubTitle {
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: lowercase;
@@ -1426,135 +1292,12 @@ nav ul li.v65-home {
   margin-bottom: 50px;
 }
 
-/* ----- About Us Wrapper ----- */
-#aboutUsWrapper {
-  width: 100%;
-  background-color: white;
-  color: #333333;
-}
-@media screen and (min-width: 1024px) {
-  #aboutUsWrapper {
-    min-height: 660px;
-  }
-}
-#aboutUsWrapper h1, #aboutUsWrapper h2, #aboutUsWrapper h3, #aboutUsWrapper h4, #aboutUsWrapper h5, #aboutUsWrapper h6 {
-  color: #16a6b6;
-}
-
-.aboutUsContent .v65-pod {
-  float: left;
-  margin: 0;
-  padding: 2%;
-}
-@media screen and (min-width: 581px) {
-  .aboutUsContent .v65-pod {
-    float: left;
-    width: 46%;
-  }
-}
-@media screen and (min-width: 836px) {
-  .aboutUsContent .v65-pod {
-    width: 21%;
-  }
-}
-
 #slider {
   overflow: hidden;
   width: 100%;
 }
 
-/* ----- Contact Us Wrapper ----- */
-#contactWrapper {
-  width: 100%;
-  background: url(../images/template/bg-texture.jpg) top center repeat #dedede;
-}
-@media screen and (min-width: 1024px) {
-  #contactWrapper {
-    min-height: 600px;
-  }
-}
-
-.contactMainContent {
-  margin: 0;
-  padding: 2%;
-}
-@media screen and (min-width: 581px) {
-  .contactMainContent {
-    float: left;
-    width: 44%;
-    padding: 2%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .contactMainContent {
-    float: left;
-    width: 400px;
-    padding: 0;
-    margin: 0 0 20px;
-  }
-}
-
-.contactRightContent {
-  margin: 0;
-  padding: 2%;
-}
-@media screen and (min-width: 581px) {
-  .contactRightContent {
-    float: right;
-    width: 44%;
-    margin-top: 10%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .contactRightContent {
-    width: 400px;
-    margin-top: 70px;
-  }
-}
-.contactRightContent .v65-pod {
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 1023px) {
-  .contactRightContent .v65-form {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .contactRightContent .v65-customForm {
-    width: 100% !important;
-  }
-}
-
 /* ----- b. Page Styles ----- */
-.content {
-  width: 100%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 836px) {
-  .content {
-    width: 900px;
-    min-height: 820px;
-    padding: 30px 30px 113px;
-  }
-}
-
-.contentWide {
-  background: #fff;
-  padding: 30px;
-}
-@media screen and (max-width: 835px) {
-  .contentWide {
-    box-shadow: none;
-    padding: 3%;
-    border-top: 2px solid #CCC;
-  }
-}
-@media screen and (min-width: 836px) {
-  .contentWide .subMenu {
-    display: none;
-  }
-}
-
 .page {
   float: right;
   width: 75%;
@@ -1567,94 +1310,103 @@ nav ul li.v65-home {
 }
 
 /*   ===================================================================================================
-     6. Blog Template
+     6. Products
 ======================================================================================================== */
-.blogContent {
-  padding: 5%;
-  width: 90%;
-}
-@media screen and (min-width: 836px) {
-  .blogContent {
-    width: 65%;
-    padding: 5%;
-    float: left;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .blogContent {
-    width: 520px;
-    padding: 20px 25px 0 0;
-    float: left;
-  }
+.v65-productGroup-title {
+  color: #333333;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
 }
 
-.blogRightWrapper {
+.v65-productGroup-teaser {
   display: none;
 }
 @media screen and (min-width: 836px) {
-  .blogRightWrapper {
-    display: block;
-    width: 20%;
-    padding: 20px 0 0 0;
-    float: right;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .blogRightWrapper {
-    float: right;
-    padding: 20px 0 0 0;
-    width: 325px;
-  }
-}
-.blogRightWrapper ul {
-  list-style: none;
-  margin: 0 0 1em;
-  padding: 0;
-}
-.blogRightWrapper ul li {
-  font-size: 11px;
-  margin: 0 0 0 10px;
-}
-
-.blogFilterLeft {
-  display: none;
-  padding: 0;
-}
-@media screen and (min-width: 836px) {
-  .blogFilterLeft {
-    width: auto;
-    display: block;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .blogFilterLeft {
+  .v65-productGroup-teaser {
     display: block;
     float: left;
-    padding: 0 25px 0 0;
-    width: 150px;
-  }
-}
-
-.blogFilterRight {
-  display: none;
-}
-@media screen and (min-width: 836px) {
-  .blogFilterRight {
-    width: auto;
-    display: block;
+    width: 55%;
+    padding: 2%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .blogFilterRight {
-    display: block;
+  .v65-productGroup-teaser {
     float: left;
-    width: 150px;
+    width: 470px;
+    padding: 0;
+    margin: 0 0 20px;
   }
 }
 
-/*   ===================================================================================================
-     7. Print Template
-======================================================================================================== */
+.v65-productGroup-products {
+  clear: both;
+}
+
+.v65-productGroup-product {
+  text-align: left;
+  width: 100%;
+}
+@media screen and (min-width: 581px) {
+  .v65-productGroup-product {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .v65-productGroup-product {
+    width: 31%;
+  }
+}
+.v65-productGroup-product .v65-product-photo {
+  width: 12%;
+  float: left;
+  text-align: left;
+  margin: 0 1em 2em 0;
+}
+@media screen and (min-width: 581px) {
+  .v65-productGroup-product .v65-product-photo {
+    width: 28%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .v65-productGroup-product .v65-product-photo {
+    text-align: center;
+    width: 32%;
+  }
+}
+.v65-productGroup-product .v65-product-photo img {
+  max-width: 100%;
+}
+@media screen and (max-width: 580px) {
+  .v65-productGroup-product .v65-product-drilldownLink {
+    display: none;
+  }
+}
+.v65-productGroup-product .v65-product-title {
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 581px) {
+  .v65-product-addToCart-priceWrapper {
+    margin-top: 20px;
+  }
+}
+
+.v65-product-addToCart-price {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 580px) {
+  .v65-addToCartCase {
+    display: none;
+  }
+}
+
 /*   ===================================================================================================
      8. Buttons
 ======================================================================================================== */

@@ -851,20 +851,6 @@ nav{
 	}
 }
 
-// .wrapper{
-// 	width:100%;
-// 	padding-top:28%;
-// 	padding-bottom:3%;
-// 	background: $background;
-
-// 	@media screen #{$break-min-mobile}{
-// 		padding-top:120px;
-// 		padding-bottom:30px;
-// 	}
-// }
-
-/* ----- a. Homepage Styles ----- */
-
 /* ----- Feature Image ----- */
 
 .featureImage{
@@ -883,128 +869,6 @@ nav{
 	img{
 		width:100%;
 		height:auto;
-	}
-}
-
-
-/* ----- Wines Wrapper ----- */
-
-#winesWrapper{
-	width:100%;
-	background: $background;
-
-	@media screen #{$break-min-desktop}{
-		min-height: 660px;
-	}
-}
-
-// .homepageContent{
-// 		width: 94%;
-// 		padding:7% 3%;
-// 		@media screen #{$break-min-tablet}{
-// 			padding:3%;		
-// 		}
-// 		@media screen #{$break-min-desktop}{
-// 			height: 100%;
-// 			width: 900px;
-// 			margin: 0 auto;
-// 		}
-// 	}
-
-.wine{
-
-	.v65-productGroup-title{
-		color: $headingColor;
-		font-family: Georgia, "Times New Roman", Times, serif;
-		font-size: 48px;
-		font-weight: bold;
-		line-height: 1.2;
-		margin: 0 0 0.6em;
-	}
-	
-	.v65-productGroup-teaser{
-		display:none;
-		
-		@media screen #{$break-min-tablet}{
-			display:block;
-			float: left;
-			width: 55%;
-			padding: 2%;
-		}
-		
-		@media screen #{$break-min-desktop}{
-			float: left;
-			width: 470px;
-			padding: 0;
-			margin: 0 0 20px;
-		}
-	}
-
-	.v65-productGroup-products{
-		clear: both;
-	}	
-
-	.v65-productGroup-product{
-		text-align: left;
-		width:100%;
-
-		@media screen #{$break-min-mobile}{
-			width:48%;
-		}
-
-		@media screen and (min-width:920px){
-			width:31%;
-		}
-
-		.v65-product-photo {
-			width: 12%;
-			float:left;
-			text-align: left;
-			margin:0 1em 2em 0;
-
-			@media screen #{$break-min-mobile}{
-				width: 28%;
-			}
-
-			@media screen and (min-width:920px){
-				text-align: center;
-				width: 32%;
-			}
-
-			img {
-				max-width: 100%;
-			}
-		}
-
-		.v65-product-drilldownLink{
-			@media screen #{$break-max-mobile}{
-				display:none;
-			}
-		}
-
-		.v65-product-title{
-			font-size: 2em;
-			font-family: Georgia, "Times New Roman", Times, serif;
-			font-weight: bold;
-		}
-	}
-
-	.v65-product-addToCart-priceWrapper{
-		
-		@media screen #{$break-min-mobile}{
-			margin-top: 20px;
-		}
-	}
-
-	.v65-product-addToCart-price{
-		font-size: 1.6em;
-		font-weight: bold;
-	}
-
-	.v65-addToCartCase{
-		@media screen #{$break-max-mobile}{
-			display:none;
-		}
 	}
 }
 
@@ -1065,52 +929,25 @@ nav{
 	}
 }
 
-/* ----- Club Wrapper ----- */
+/* ----- Four Col layout ----- */
 
-#clubWrapper{
-	width:100%;
-	background: $background;
-
-	@media screen #{$break-min-desktop}{
-		min-height: 660px;
-	}
-}
-
-.clubMainContent {
-	margin: 0;
-	padding: 2%;
-
-	@media screen #{$break-min-tablet}{
-		float: left;
-		width: 44%;
-		padding: 2%;
-	}
-
-	@media screen #{$break-min-desktop}{
-		float: left;
-		width: 400px;
-		padding: 0;
-		margin: 0 0 20px;
-	}
-}
-
-.clubRightContent{
-	margin: 0;
-	padding: 2%;
-	@media screen #{$break-min-tablet}{
-		float:right;
-		width:44%;
-		margin-top:11.5%;
-	}
-
-	@media screen #{$break-min-desktop}{
-		width:400px;
-		margin-top:85px;
-	}
+.fourCol{
+	
 	.v65-pod{
-		margin-bottom:50px;
+		float:left;
+		margin: 0;
+		padding: 2%;
+		@media screen #{$break-min-mobile}{
+			float:left;
+			width:46%;
+		}
+		@media screen #{$break-min-tablet}{
+			width:21%;
+		}	
 	}
 }
+
+/* ----- Clubs ----- */
 
 .v65-clubTitle{
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -1125,247 +962,119 @@ nav{
 }
 
 
-/* ----- About Us Wrapper ----- */
-
-#aboutUsWrapper{
-	width:100%;
-	background-color: $backgroundColorReverse;
-	color: $fontColorReverse;
-
-	@media screen #{$break-min-tablet}{
-	}
-
-	@media screen #{$break-min-desktop}{
-		min-height: 660px;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		color: $headingColorReverse;
-	}
-}
-
-.aboutUsContent .v65-pod{
-	float:left;
-	margin: 0;
-	padding: 2%;
-	@media screen #{$break-min-mobile}{
-		float:left;
-		width:46%;
-	}
-	@media screen #{$break-min-tablet}{
-		width:21%;
-	}	
-}
-
 #slider{
 	overflow: hidden;
 	width: 100%;
 }
 
-/* ----- Contact Us Wrapper ----- */
-
-#contactWrapper{
-	width:100%;
-	background: $background;
-
-	@media screen #{$break-min-desktop}{
-		min-height: 600px;
-	}
-}
-
-.contactMainContent {
-		  	margin: 0;
-		  	padding: 2%;
-		  	@media screen #{$break-min-mobile}{
-		  	float: left;
-			width: 44%;
-			padding: 2%;
-		  	}
-		  	@media screen #{$break-min-desktop}{
-		  	float: left;
-			width: 400px;
-			padding: 0;
-			margin: 0 0 20px;
-		  	}
-	}
-
-.contactRightContent{
-
-	margin: 0;
-	padding: 2%;
-	@media screen #{$break-min-mobile}{
-		float:right;
-		width:44%;
-		margin-top:10%;
-	}
-
-	@media screen #{$break-min-desktop}{
-		width:400px;
-		margin-top:70px;
-	}
-	.v65-pod{
-		margin-bottom:50px;
-	}
-
-	.v65-form{
-		@media screen #{$break-max-desktop}{
-			width: 100% !important;
-		}
-	}
-
-	.v65-customForm{
-		@media screen #{$break-max-desktop}{
-			width: 100% !important;
-		}
-	}
-}
-
-
 /* ----- b. Page Styles ----- */
 
-	.content{
-		width: 100%;
-		margin: 0 auto;
-		@media screen #{$break-min-tablet}{
-			width:900px;
-			min-height: 820px;
-			padding:30px 30px 113px;
-		}
+.page{
+	float: right;
+	width: 75%; //650px
+	@media screen #{$break-max-tablet}{
+		padding:3%;
+		width:94%;
 	}
-
-	.contentWide{
-		background: #fff;
-		padding: 30px;
-		@media screen #{$break-max-tablet}{
-			box-shadow: none;
-			padding:3%;
-			border-top: 2px solid #CCC;
-
-		}
-
-		.subMenu{
-			@media screen #{$break-min-tablet}{
-				display:none;
-			}
-		}
-	}
-
-	.wide{}
-
-	.page{
-		float: right;
-		width: 75%; //650px
-		@media screen #{$break-max-tablet}{
-			padding:3%;
-			width:94%;
-		}
-	}
-
-
+}
 
 /*   ===================================================================================================
-     6. Blog Template
+     6. Products
 ======================================================================================================== */
 
-	.blogContent{	
-		padding: 5%;
-		width: 90%;
-		@media screen #{$break-min-tablet}{
-		width: 65%;
-		padding: 5%;
-		float: left;
-		}
-		@media screen #{$break-min-desktop}{
-		width: 520px;
-		padding: 20px 25px 0 0;
-		float: left;
-		}
-	
-	}
-
-	.blogRightWrapper { 
-		display:none;
-		@media screen #{$break-min-tablet}{
-			display: block;
-			width: 20%;
-			padding: 20px 0 0 0;
-			float: right;
-		}
-		@media screen #{$break-min-desktop}{
-			float: right;
-			padding: 20px 0 0 0;
-			width: 325px;
-		}
-
-		ul{
-			list-style: none;
-			margin: 0 0 1em;
-			padding: 0;
-
-			li{
-				font-size: 11px;
-				margin: 0 0 0 10px;
-			}
-		}
-	}
-
-	.blogFilterLeft {
-		display:none;
-		padding:0;
-		@media screen #{$break-min-tablet}{
-			width:auto;
-			display: block;
-		}
-		@media screen #{$break-min-desktop}{
-			display: block;
-			float: left;
-			padding: 0 25px 0 0;
-			width: 150px;
-		}			
-	}
-
-	.blogFilterRight { 
-		display:none;
-		@media screen #{$break-min-tablet}{
-			width:auto;
-			display: block;
-		} 
-		@media screen #{$break-min-desktop}{
-			display: block;
-			float: left;
-			width: 150px;
-		}		
-	}
-
-/*   ===================================================================================================
-     7. Print Template
-======================================================================================================== */
-
-.printBody { 
+.v65-productGroup-title{
+	color: $headingColor;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 48px;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 0 0 0.6em;
 }
-	
-.printWrapper { 
 
+.v65-productGroup-teaser{
+	display:none;
+	
+	@media screen #{$break-min-tablet}{
+		display:block;
+		float: left;
+		width: 55%;
+		padding: 2%;
+	}
+	
+	@media screen #{$break-min-desktop}{
+		float: left;
+		width: 470px;
+		padding: 0;
+		margin: 0 0 20px;
+	}
 }
-	
-	.printHeader { 
-		
 
-		img{
-				
+.v65-productGroup-products{
+	clear: both;
+}	
+
+.v65-productGroup-product{
+	text-align: left;
+	width:100%;
+
+	@media screen #{$break-min-mobile}{
+		width:48%;
+	}
+
+	@media screen and (min-width:920px){
+		width:31%;
+	}
+
+	.v65-product-photo {
+		width: 12%;
+		float:left;
+		text-align: left;
+		margin:0 1em 2em 0;
+
+		@media screen #{$break-min-mobile}{
+			width: 28%;
+		}
+
+		@media screen and (min-width:920px){
+			text-align: center;
+			width: 32%;
+		}
+
+		img {
+			max-width: 100%;
 		}
 	}
-		
-	.printContent { 
 
+	.v65-product-drilldownLink{
+		@media screen #{$break-max-mobile}{
+			display:none;
 		}
+	}
 
-		#v65-cartTable{
-			
-			td{
-				
-			}
-		} 	
+	.v65-product-title{
+		font-size: 2em;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-weight: bold;
+	}
+}
+
+.v65-product-addToCart-priceWrapper{
+	
+	@media screen #{$break-min-mobile}{
+		margin-top: 20px;
+	}
+}
+
+.v65-product-addToCart-price{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.v65-addToCartCase{
+	@media screen #{$break-max-mobile}{
+		display:none;
+	}
+}
 
 /*   ===================================================================================================
      8. Buttons
