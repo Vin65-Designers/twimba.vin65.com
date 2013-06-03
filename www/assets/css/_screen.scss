@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import "compass";
+
 
 /* CSS Document */
 /* ====================================================================================================
@@ -394,7 +396,7 @@ ul, ol, dl, p, table, pre {
 	margin-bottom: 1em;
 }
 
-h1,h2,h3,h4,h5,h6{
+#{headings(1,6)}{
 	color: $headingColor;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: normal;
@@ -492,55 +494,31 @@ hr {
 	
 }
 
-.hideText{
-	overflow:hidden;
-	text-indent:100%;
-	white-space:nowrap;
-}
-	
-	.hideText a{
-		display:block;
-		height:100%;
-	}
-
 /*   ===================================================================================================
      3. Header
 ======================================================================================================== */
 
-header.main{
+.headerWrapper{
+	margin: 0 auto;
+	position: fixed;
 	background-color:$headerBackgroundColor;
 	color:$headerTextColor;
-	position: fixed;
-	width: 100%;
+	width:100%;
 	z-index:100;
+	padding:0;
 
-	@media screen #{$break-min-tablet}{
+	 @media screen #{$break-min-tablet}{
 		height:75px;
-	}
+	 }
 
 	a{
 		color:$headerLinkColor;
-	}
-
-	.wrapper{
-		margin: 0 auto;
-		padding: 0;
-		max-width: 950px;
-
-		@media screen #{$break-min-tablet} {
-			position: relative;	
-		}
-
-		@media screen #{$break-min-desktop}{
-			width:950px;
-		}
 	}
 }
 
 #user-tools{
 	color:$userToolsLinkColor;
 	border-bottom:1px solid #666;
-
 	@media screen #{$break-min-mobile}{
 		border:none;
 	}
@@ -551,30 +529,30 @@ header.main{
 
 	a{
 		color:$userToolsLinkColor;
+
+		@media screen #{$break-min-tablet}{
+			color:$userToolsLinkColor;
+		}
 	}
 }
 
-.logo{
-	background: image-url('inverse-logo.png') no-repeat;
-	background-color: $logoBackgroundColor;
-	background-size: contain;
-	border: $logoBorder;
-	display:none;
+.header{
+	width: 100%;
+	z-index: 100;
+	margin: 0 auto;
+	@media screen #{$break-min-tablet} {
+		position: relative;	
+	}
+	@media screen #{$break-min-desktop}{
+		width:950px;
+	}
+}
+
+header{
 	float: left;
 	height: 48px;
 	width:75px;
-
-	&.smallLogo{
-		background-color: transparent;
-		border: none;
-		height:75px;
-		width:120px;
-	}
-
-	h1{
-		margin: 0;
-		height: 100%;
-	}
+	display:none;
 
 	@media screen #{$break-min-mobile}{
 		display:block;
@@ -591,12 +569,25 @@ header.main{
 		text-align:center;
 	}
 
-	img{
+
+	.logo{
 		height: 100%;
+
+		img{
+			height: 100%;
+		}
+	}
+
+	.cart {
+		@media screen #{$break-max-mobile}{
+			display: none;
+		}
 	}
 }
 
 .logoWrapper{
+
+
 	border: $logoBorder;
 	background-color: $logoBackgroundColor;
 
@@ -627,23 +618,22 @@ header.main{
 	
 
 /* ----- Link to footer navigation ----- */
-.menuLink {
-	display:none;
-	
-	@media screen #{$break-max-tablet}{
-		color: #fff;
-		/*display: block;*/
-		float: left;
-		font-size: 16px;
-		height: 45px;
-		line-height: 45px;
-		padding-left: 15px;
-	}
+	.menuLink {
+		display:none;
+			@media screen #{$break-max-tablet}{
+				color: #fff;
+				/*display: block;*/
+				float: left;
+				font-size: 16px;
+				height: 45px;
+				line-height: 45px;
+				padding-left: 15px;
+				}
 
-	&:hover, &:focus, &:active{
-		text-decoration: none;
-	}
-}
+				&:hover, &:focus, &:active{
+					text-decoration: none;
+					}
+		}
 
 
 /* ----- a. Main Menu ----- */
@@ -655,34 +645,32 @@ nav{
 	z-index: 101;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	text-transform: uppercase;
-	
-	@media screen #{$break-max-tablet}{
-		text-align: center;
+		@media screen #{$break-max-tablet}{
+			text-align: center;
+			}
+		@media screen #{$break-tablet}{
+			float:right;
+			width: 65%;//640px
+			position: relative;
+			margin: 0 10px 0 0;
+			}
+		@media screen #{$break-min-desktop}{
+			float:right;
+			height: 24px;
+			width: 640px;
+			position: relative;
+			margin: 0;
 		}
-	@media screen #{$break-tablet}{
-		float:right;
-		width: 65%;//640px
-		position: relative;
-		margin: 0 10px 0 0;
-		}
-	@media screen #{$break-min-desktop}{
-		float:right;
-		height: 24px;
-		width: 640px;
-		position: relative;
-		margin: 0;
-	}
 
 	ul{
 		margin: 0;
 		padding: 0;
 		display: inline;
-		
-		@media screen #{$break-min-tablet}{
-			float:right;
-			margin:0;
-			text-align: left;
-		}
+			@media screen #{$break-min-tablet}{
+				float:right;
+				margin:0;
+				text-align: left;
+			}
 
 		li{
 			margin: 0;
@@ -690,18 +678,20 @@ nav{
 			height: 45px;
 			line-height: 45px;
 			display: inline-block;
-			
 			@media screen #{$break-min-tablet}{
+				float:left;
 				height: 28px;
 				line-height: 28px;
 				margin: 0 25px;
 				margin: 0 0 0 35px;
 				position:relative;
+				display: inline;
 			}
-
 			@media screen #{$break-min-desktop}{
+				float:left;
 				margin: 0 0 0 55px;
 				position:relative;
+				display: inline;
 			}
 
 			a{
@@ -713,22 +703,42 @@ nav{
 				padding: 0 3px;
 				position: relative;
 				text-decoration: none;
-
 				@media screen #{$break-min-tablet}{
 					height:32px;
 					line-height: 32px;
 					display: inline-block;
 					margin: 0;
 					padding: 0;
-				}
+					}
 
 				&:hover{
 					color: $navigationColorHover;
 					text-decoration: none;
 				}
 			}
+			// This template does not include dropdown
+			&:hover ul{
+			}
+			ul{
+
+				li{
+
+					a{
+
+						&:hover{
+						}
+					}
+				}
+			}
+			// This template does not include dropdown
+
+			/*home link is hidden for mobile*/
 			&.v65-home {
 				display: none;
+			}
+			&.v65-pageAParent{
+			}
+			&.v65-selected{
 			}
 		}
 	}
@@ -736,10 +746,9 @@ nav{
 
 /* ----- b. Sub Menu ----- */
 .subMenu{
-	clear: both;
 	height:100%;
 	width: 100%;
-
+	clear: both;
 	@media screen #{$break-min-tablet}{
 		border-right: 1px solid #ccc;
 		float: left;
@@ -830,47 +839,29 @@ nav{
 ======================================================================================================== */
 
 .wrapper{
-	margin: 0 auto;
-	padding: 3%;
-	position: relative;
-	height: 100%;
-	max-width: 900px;
+	width:100%;
+	padding-top:28%;
+	padding-bottom:3%;
+	background: $background;
 
-	&.innerContent{
-		padding-bottom: 0;
-		padding-top: 28%;
-
-		@media screen #{$break-min-mobile}{
-			padding-bottom: 30px;
-			padding-top: 120px;
-		}
+	@media screen #{$break-min-mobile}{
+		padding-top:120px;
+		padding-bottom:30px;
 	}
 }
-
-// .wrapper{
-// 	width:100%;
-// 	padding-top:28%;
-// 	padding-bottom:3%;
-// 	background: $background;
-
-// 	@media screen #{$break-min-mobile}{
-// 		padding-top:120px;
-// 		padding-bottom:30px;
-// 	}
-// }
 
 /* ----- a. Homepage Styles ----- */
 
 /* ----- Feature Image ----- */
 
-.featureImage{
-	background-color: #000;
-	line-height: 0;
-	margin: 0 auto;
-	min-height: 100%;
-	overflow:hidden;
-	text-align: center;
+#featureImage{
+
 	width: auto;
+	min-height: 100%;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000;
+	overflow:hidden;
 
 	@media screen #{$break-min-tablet}{
 		padding-top:0;
@@ -894,115 +885,118 @@ nav{
 	}
 }
 
-// .homepageContent{
-// 		width: 94%;
-// 		padding:7% 3%;
-// 		@media screen #{$break-min-tablet}{
-// 			padding:3%;		
-// 		}
-// 		@media screen #{$break-min-desktop}{
-// 			height: 100%;
-// 			width: 900px;
-// 			margin: 0 auto;
-// 		}
-// 	}
-
-.wine{
-
-	.v65-productGroup-title{
-		color: $headingColor;
-		font-family: Georgia, "Times New Roman", Times, serif;
-		font-size: 48px;
-		font-weight: bold;
-		line-height: 1.2;
-		margin: 0 0 0.6em;
-	}
-	
-	.v65-productGroup-teaser{
-		display:none;
-		
+.homepageContent{
+		width: 94%;
+		padding:7% 3%;
 		@media screen #{$break-min-tablet}{
-			display:block;
-			float: left;
+			padding:3%;		
+		}
+		@media screen #{$break-min-desktop}{
+			height: 100%;
+			width: 900px;
+			margin: 0 auto;
+		}
+	}
+
+	.v65-productGroup-teaser{
+		  	display:none;
+		  	@media screen #{$break-min-tablet}{
+		  	display:block;
+		  	float: left;
 			width: 55%;
 			padding: 2%;
-		}
-		
-		@media screen #{$break-min-desktop}{
-			float: left;
+		  	}
+		  	@media screen #{$break-min-desktop}{
+		  	float: left;
 			width: 470px;
 			padding: 0;
 			margin: 0 0 20px;
-		}
+		  	}
+	}
+
+
+	.v65-productGroup-title{
+		font-size: 48px;
+		line-height: 1.2;
+		margin: 0 0 0.6em;
+		font-weight: bold;
+		color: $headingColor;
+		font-family: Georgia, "Times New Roman", Times, serif;
 	}
 
 	.v65-productGroup-products{
-		clear: both;
-	}	
+		float:left;
+	}
 
-	.v65-productGroup-product{
-		text-align: left;
-		width:100%;
 
-		@media screen #{$break-min-mobile}{
-			width:48%;
-		}
+	.homepageProductGroup {
+		clear:both; 
+		margin: 0;
+		padding:5px 0 0 0;
+		  	
+		 @media screen #{$break-min-desktop}{
+		  }
 
-		@media screen and (min-width:920px){
-			width:31%;
-		}
-
-		.v65-product-photo {
-			width: 12%;
-			float:left;
+		.v65-productGroup-product{
+			width:100%;
 			text-align: left;
-			margin:0 1em 2em 0;
 
 			@media screen #{$break-min-mobile}{
-				width: 28%;
+				width:48%;
 			}
-
 			@media screen and (min-width:920px){
-				text-align: center;
-				width: 32%;
+				width:31%;
+			}	
+
+			.v65-product-photo {
+				width: 12%;
+				float:left;
+				text-align: left;
+				margin:0 1em 2em 0; 
+				@media screen #{$break-min-mobile}{
+					width: 28%;
+				}
+
+				@media screen and (min-width:920px){
+					width: 32%;
+					text-align: center;
+				}
+
+				img {
+					max-width: 100%;
+				}
 			}
 
-			img {
-				max-width: 100%;
+			.v65-product-drilldownLink{
+				@media screen #{$break-max-mobile}{
+					display:none;
+				}
+			}
+
+			.v65-product-title{
+				font-size: 2em;
+				font-family: Georgia, "Times New Roman", Times, serif;
+				font-weight: bold;
+			}
+		}
+		.v65-product-addToCart-priceWrapper{
+			
+			@media screen #{$break-min-mobile}{
+				margin-top: 20px;
 			}
 		}
 
-		.v65-product-drilldownLink{
+		.v65-product-addToCart-price{
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+
+		.v65-addToCartCase{
 			@media screen #{$break-max-mobile}{
 				display:none;
 			}
 		}
-
-		.v65-product-title{
-			font-size: 2em;
-			font-family: Georgia, "Times New Roman", Times, serif;
-			font-weight: bold;
-		}
 	}
-
-	.v65-product-addToCart-priceWrapper{
-		
-		@media screen #{$break-min-mobile}{
-			margin-top: 20px;
-		}
-	}
-
-	.v65-product-addToCart-price{
-		font-size: 1.6em;
-		font-weight: bold;
-	}
-
-	.v65-addToCartCase{
-		@media screen #{$break-max-mobile}{
-			display:none;
-		}
-	}
-}
 
 /* ----- Events Wrapper ----- */
 
@@ -1252,7 +1246,7 @@ nav{
 		}
 	}
 
-	.page{
+	.pageContent{
 		float: right;
 		width: 75%; //650px
 			@media screen #{$break-max-tablet}{
