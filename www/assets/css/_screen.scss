@@ -555,7 +555,8 @@ header.main{
 }
 
 .logo{
-	background: $logoBackgroundColor image-url('inverse-logo.png') no-repeat;
+	background: image-url('inverse-logo.png') no-repeat;
+	background-color: $logoBackgroundColor;
 	background-size: contain;
 	border: $logoBorder;
 	display:none;
@@ -563,11 +564,11 @@ header.main{
 	height: 48px;
 	width:75px;
 
-	&.logoScroll{
+	&.smallLogo{
+		background-color: transparent;
+		border: none;
 		height:75px;
 		width:120px;
-		border: none;
-		background: none;
 	}
 
 	h1{
@@ -738,7 +739,7 @@ nav{
 	clear: both;
 	height:100%;
 	width: 100%;
-	
+
 	@media screen #{$break-min-tablet}{
 		border-right: 1px solid #ccc;
 		float: left;
@@ -834,6 +835,16 @@ nav{
 	position: relative;
 	height: 100%;
 	max-width: 900px;
+
+	&.innerContent{
+		padding-bottom: 0;
+		padding-top: 28%;
+
+		@media screen #{$break-min-mobile}{
+			padding-bottom: 30px;
+			padding-top: 120px;
+		}
+	}
 }
 
 // .wrapper{
@@ -1241,7 +1252,7 @@ nav{
 		}
 	}
 
-	.pageContent{
+	.page{
 		float: right;
 		width: 75%; //650px
 			@media screen #{$break-max-tablet}{

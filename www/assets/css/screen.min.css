@@ -891,7 +891,8 @@ header.main .wrapper {
 }
 
 .logo {
-  background: #333333 url('../images/inverse-logo.png?1370023199') no-repeat;
+  background: url('../images/inverse-logo.png?1370023199') no-repeat;
+  background-color: #333333;
   background-size: contain;
   border: 4px solid black;
   display: none;
@@ -899,11 +900,11 @@ header.main .wrapper {
   height: 48px;
   width: 75px;
 }
-.logo.logoScroll {
+.logo.smallLogo {
+  background-color: transparent;
+  border: none;
   height: 75px;
   width: 120px;
-  border: none;
-  background: none;
 }
 .logo h1 {
   margin: 0;
@@ -1170,6 +1171,16 @@ nav ul li.v65-home {
   position: relative;
   height: 100%;
   max-width: 900px;
+}
+.wrapper.innerContent {
+  padding-bottom: 0;
+  padding-top: 28%;
+}
+@media screen and (min-width: 581px) {
+  .wrapper.innerContent {
+    padding-bottom: 30px;
+    padding-top: 120px;
+  }
 }
 
 /* ----- a. Homepage Styles ----- */
@@ -1560,12 +1571,12 @@ nav ul li.v65-home {
   }
 }
 
-.pageContent {
+.page {
   float: right;
   width: 75%;
 }
 @media screen and (max-width: 835px) {
-  .pageContent {
+  .page {
     width: 94%;
     padding: 3%;
   }
