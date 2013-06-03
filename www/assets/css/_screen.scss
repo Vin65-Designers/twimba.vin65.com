@@ -600,31 +600,6 @@ header.main{
 	}
 }
 
-.logoWrapper{
-	border: $logoBorder;
-	background-color: $logoBackgroundColor;
-
-	@media screen #{$break-max-tablet}{
-		border: none;
-		background: none;
-	}
-
-	&.logoScroll{
-		height:75px;
-		width:120px;
-		border: none;
-		background: none;
-	}
-}
-
-.logoWrapper2{
-
-	border: none;
-	height:75px;
-	width:120px;
-
-}
-
 /*   ===================================================================================================
      4. Navigation
 ======================================================================================================== */
@@ -817,17 +792,6 @@ nav{
 	}
 }
 
-/* ----- Anchors ----- */
-
-.anchor{
-
-	margin-top:-20%;
-
-	@media screen #{$break-min-tablet}{
-		margin-top:-200px;
-	}
-}
-
 
 /*   ===================================================================================================
      5. Content
@@ -932,7 +896,7 @@ nav{
 /* ----- Four Col layout ----- */
 
 .fourCol{
-	
+
 	.v65-pod{
 		float:left;
 		margin: 0;
@@ -982,46 +946,42 @@ nav{
      6. Products
 ======================================================================================================== */
 
-.v65-productGroup-title{
-	color: $headingColor;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 48px;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 0 0 0.6em;
-}
-
-.v65-productGroup-teaser{
-	display:none;
-	
-	@media screen #{$break-min-tablet}{
-		display:block;
-		float: left;
-		width: 55%;
-		padding: 2%;
-	}
-	
-	@media screen #{$break-min-desktop}{
-		float: left;
-		width: 470px;
-		padding: 0;
-		margin: 0 0 20px;
+.v65-clear{
+	@media screen and (min-width:925px){
+		display: none;
 	}
 }
 
-.v65-productGroup-products{
-	clear: both;
-}	
-
-.v65-productGroup-product{
-	text-align: left;
-	width:100%;
-
+.v65-product-addToCart-priceWrapper{
+	
 	@media screen #{$break-min-mobile}{
+		margin-top: 20px;
+	}
+}
+
+.v65-product-addToCart-price{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.v65-addToCartCase{
+	@media screen #{$break-max-mobile}{
+		display:none;
+	}
+}
+
+/* ----- List ----- */
+
+.v65-product2Up{
+	width:100%;
+	text-align: left;
+
+	@media screen and (min-width:600px){
+		margin: 0 2% 1em 0;
 		width:48%;
 	}
 
-	@media screen and (min-width:920px){
+	@media screen and (min-width:925px){
 		width:31%;
 	}
 
@@ -1058,21 +1018,20 @@ nav{
 	}
 }
 
-.v65-product-addToCart-priceWrapper{
+/* ----- Drilldown ----- */
+
+.v65-productWrapper{
+	padding: 0;
 	
-	@media screen #{$break-min-mobile}{
-		margin-top: 20px;
-	}
-}
-
-.v65-product-addToCart-price{
-	font-size: 1.6em;
-	font-weight: bold;
-}
-
-.v65-addToCartCase{
-	@media screen #{$break-max-mobile}{
-		display:none;
+	.productTitle {
+		float: right;
+		width: 62.5%;
+		
+		@media screen and (max-width : 680px) {
+			float: none; 
+			text-align: center;
+			width: 100%; 
+		}
 	}
 }
 
@@ -1400,25 +1359,6 @@ footer{
 
 #v65-signUpClubSummaryWrapper {
 	margin-bottom: 20px;
-}
-
-
-/* ----- Fix for product sorting  ----- */
-
-
-.v65-product-sortBy { 
-	float: left; 
-	text-align: left; 
-	width: 50%;
-
-	form { 
-		padding: 0; 
-		margin: 0;
-
-		select { 
-			width: 130px; 
-		} 
-	} 
 }
 
 /* ----- Fix for overflow on FB sharing widget on mobile  ----- */

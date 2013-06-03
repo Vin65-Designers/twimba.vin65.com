@@ -935,29 +935,6 @@ header.main .wrapper {
   height: 100%;
 }
 
-.logoWrapper {
-  border: 4px solid black;
-  background-color: #333333;
-}
-@media screen and (max-width: 835px) {
-  .logoWrapper {
-    border: none;
-    background: none;
-  }
-}
-.logoWrapper.logoScroll {
-  height: 75px;
-  width: 120px;
-  border: none;
-  background: none;
-}
-
-.logoWrapper2 {
-  border: none;
-  height: 75px;
-  width: 120px;
-}
-
 /*   ===================================================================================================
      4. Navigation
 ======================================================================================================== */
@@ -1155,16 +1132,6 @@ nav ul li.v65-home {
   }
 }
 
-/* ----- Anchors ----- */
-.anchor {
-  margin-top: -20%;
-}
-@media screen and (min-width: 836px) {
-  .anchor {
-    margin-top: -200px;
-  }
-}
-
 /*   ===================================================================================================
      5. Content
 ======================================================================================================== */
@@ -1312,82 +1279,10 @@ nav ul li.v65-home {
 /*   ===================================================================================================
      6. Products
 ======================================================================================================== */
-.v65-productGroup-title {
-  color: #333333;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0 0 0.6em;
-}
-
-.v65-productGroup-teaser {
-  display: none;
-}
-@media screen and (min-width: 836px) {
-  .v65-productGroup-teaser {
-    display: block;
-    float: left;
-    width: 55%;
-    padding: 2%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .v65-productGroup-teaser {
-    float: left;
-    width: 470px;
-    padding: 0;
-    margin: 0 0 20px;
-  }
-}
-
-.v65-productGroup-products {
-  clear: both;
-}
-
-.v65-productGroup-product {
-  text-align: left;
-  width: 100%;
-}
-@media screen and (min-width: 581px) {
-  .v65-productGroup-product {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 920px) {
-  .v65-productGroup-product {
-    width: 31%;
-  }
-}
-.v65-productGroup-product .v65-product-photo {
-  width: 12%;
-  float: left;
-  text-align: left;
-  margin: 0 1em 2em 0;
-}
-@media screen and (min-width: 581px) {
-  .v65-productGroup-product .v65-product-photo {
-    width: 28%;
-  }
-}
-@media screen and (min-width: 920px) {
-  .v65-productGroup-product .v65-product-photo {
-    text-align: center;
-    width: 32%;
-  }
-}
-.v65-productGroup-product .v65-product-photo img {
-  max-width: 100%;
-}
-@media screen and (max-width: 580px) {
-  .v65-productGroup-product .v65-product-drilldownLink {
+@media screen and (min-width: 925px) {
+  .v65-clear {
     display: none;
   }
-}
-.v65-productGroup-product .v65-product-title {
-  font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
 }
 
 @media screen and (min-width: 581px) {
@@ -1404,6 +1299,69 @@ nav ul li.v65-home {
 @media screen and (max-width: 580px) {
   .v65-addToCartCase {
     display: none;
+  }
+}
+
+/* ----- List ----- */
+.v65-product2Up {
+  width: 100%;
+  text-align: left;
+}
+@media screen and (min-width: 600px) {
+  .v65-product2Up {
+    margin: 0 2% 1em 0;
+    width: 48%;
+  }
+}
+@media screen and (min-width: 925px) {
+  .v65-product2Up {
+    width: 31%;
+  }
+}
+.v65-product2Up .v65-product-photo {
+  width: 12%;
+  float: left;
+  text-align: left;
+  margin: 0 1em 2em 0;
+}
+@media screen and (min-width: 581px) {
+  .v65-product2Up .v65-product-photo {
+    width: 28%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .v65-product2Up .v65-product-photo {
+    text-align: center;
+    width: 32%;
+  }
+}
+.v65-product2Up .v65-product-photo img {
+  max-width: 100%;
+}
+@media screen and (max-width: 580px) {
+  .v65-product2Up .v65-product-drilldownLink {
+    display: none;
+  }
+}
+.v65-product2Up .v65-product-title {
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+/* ----- Drilldown ----- */
+.v65-productWrapper {
+  padding: 0;
+}
+.v65-productWrapper .productTitle {
+  float: right;
+  width: 62.5%;
+}
+@media screen and (max-width: 680px) {
+  .v65-productWrapper .productTitle {
+    float: none;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -1724,20 +1682,6 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 
 #v65-signUpClubSummaryWrapper {
   margin-bottom: 20px;
-}
-
-/* ----- Fix for product sorting  ----- */
-.v65-product-sortBy {
-  float: left;
-  text-align: left;
-  width: 50%;
-}
-.v65-product-sortBy form {
-  padding: 0;
-  margin: 0;
-}
-.v65-product-sortBy form select {
-  width: 130px;
 }
 
 /* ----- Fix for overflow on FB sharing widget on mobile  ----- */
