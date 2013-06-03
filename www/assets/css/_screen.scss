@@ -748,7 +748,7 @@ nav{
 		border-right: 1px solid #ccc;
 		float: left;
 		margin-right: 4%;
-		padding-right: 2%; //20px
+		padding-right: 2%; //20px 
 		width: 17.8%; // 170px
 		clear: left;
 	}
@@ -1232,15 +1232,7 @@ nav{
 		}
 	}
 
-	.wide{
-		padding:0.2em;
-		width: 94%;
-		margin:0 auto;
-
-		@media screen #{$break-min-desktop}{
-			width:900px;
-		}
-	}
+	.wide{}
 
 	.page{
 		float: right;

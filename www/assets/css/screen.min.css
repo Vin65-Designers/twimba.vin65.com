@@ -1544,17 +1544,6 @@ nav ul li.v65-home {
   }
 }
 
-.wide {
-  padding: 0.2em;
-  width: 94%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1024px) {
-  .wide {
-    width: 900px;
-  }
-}
-
 .page {
   float: right;
   width: 75%;
