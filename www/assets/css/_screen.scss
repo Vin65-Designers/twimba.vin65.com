@@ -481,31 +481,31 @@ hr {
 		z-index: 900;
 
 		a {
-			color: $backtoTopColor;
 			background: $backtoTopBackground;
 			border: 1px solid $backtoTopBorder;
 			border-radius: 50%;
+			color: $backtoTopColor;
 			display: block;
-			line-height: 5em;
 			height: 5em;
-			width: 5em;
+			line-height: 5em;
 			text-align: center;
 			text-decoration: none;
+			width: 5em;
 		}
 	}
-	
 }
 
 .hideText{
 	overflow:hidden;
 	text-indent:100%;
 	white-space:nowrap;
-}
 	
-	.hideText a{
+	a{
 		display:block;
 		height:100%;
 	}
+}
+	
 
 /*   ===================================================================================================
      3. Header
@@ -1189,158 +1189,150 @@ footer{
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 	}
-}
 
-.footer{
 	width: 100%;
+
 	@media screen #{$break-min-tablet}{
 		color: $fontColorReverse;
 		padding: 1em 0;
 		text-align: center;
-		}
-
-		a{
-			color:$fontColorReverse;
-		}
 
 	}
 
+	a{
+		color:$fontColorReverse;
+	}
 
-			
-		/* Footer Nav
-		-----------------------------------------------*/
-		.footerNav {
-			width: 100%;
-				@media screen #{$break-max-tablet}{
-					background: none;	
-				}  
-			
+	.wrapper{
+		padding: 0;
 
-			ul{ 
-				border-top: 3px solid #000;
-				list-style: none;
-				width: 100%;
-				margin: 0;
-				padding: 0;
-				@media screen #{$break-min-tablet}{
-					border: none;
-					text-align: center;	
-					} 
-
-				li{ 
-					border-bottom: 1px solid #000;
-					margin: 0;
-					padding: 0;
-					text-align: center;
-					width: 100%;
-					@media screen #{$break-min-tablet}{
-						display: inline;
-						padding:0 5px;
-						border:none;
-						}
-
-					a{ 
-						font-size: 1em;
-						line-height: 3em;
-						display: block;
-						@media screen #{$break-min-tablet}{
-							color: $fontColorReverse;
-							display: inline-block;
-							font-size: 0.917em;
-							position: relative;
-							&:hover{
-							color: $fontColorReverseHover;
-							}  
-						}
-					}
-				}
-			}
-		} 
-
-		/* Mobile Footer Tools
-		-----------------------------------------------*/
-		.footerTools {
-			background: $backgroundColorMobileFooterTools;
-			width: 100%;
-
-			ul{ 
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				 	@media screen #{$break-min-tablet}{
-				 		border:none;
-				 	}
-
-				li{ 
-					line-height: 2.5em; 
-					margin: 0;
-					padding: 0;
-					text-align: center;
-					width: 100%;
-						@media screen #{$break-min-tablet}{
-				 		border:none;
-				 		} 
-
-						img {
-							vertical-align:text-top;
-						}
-
-						a { 
-							line-height: 2.5em;
-							display: block;
-								@media screen #{$break-min-tablet}{
-									display:inline-block;
-								} 
-						} 
-
-					}
-
-				li.phone, li.email, li.map{
-					color: #555; 
-					@media screen #{$break-min-tablet}{
-						display:none;}
-					}
-
-				li.legal {
-					border-bottom: 0;
-					font-size: 0.875em;
-					line-height: 3em;
-						@media screen #{$break-max-tablet}{
-						color: #555;	
-						}
-						@media screen #{$break-min-tablet}{
-							float:left;
-							display: block;
-						}
-					}
-
-				li.accolade {
-					font-size: 0.875em;
-					line-height: 3em;
-						@media screen #{$break-max-tablet}{
-						color: #555;	
-						}
-						@media screen #{$break-min-tablet}{
-							float:left;
-							display: block;
-						}
-
-						a {
-							color: #555;
-							@media screen #{$break-min-tablet}{
-								color: #000;	
-							}	
-						}
-
-					}
-
-			}
-
-			 a{color: #ccc;
-				}
-
+		@media screen #{$break-min-tablet}{
+			padding: 3%;
 		}
+	}
+}
+
+	.footerNav {
+		width: 100%;
+		
+		@media screen #{$break-max-tablet}{
+			background: none;	
+		}
+
+		ul{ 
+			border-top: 3px solid #000;
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			@media screen #{$break-min-tablet}{
+				border: none;
+				text-align: center;	
+			}
+		}
+
+		li{ 
+			border-bottom: 1px solid #000;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			width: 100%;
+
+			@media screen #{$break-min-tablet}{
+				display: inline;
+				padding:0 5px;
+				border:none;
+			}
+		}
+		
+		a{ 
+			font-size: 1em;
+			line-height: 3em;
+			display: block;
+
+			@media screen #{$break-min-tablet}{
+				color: $fontColorReverse;
+				display: inline-block;
+				font-size: 0.917em;
+				position: relative;
+				
+				&:hover{
+					color: $fontColorReverseHover;
+				}  
+			}
+		}
+	} 
+
+	.footerTools {
+		background: $backgroundColorMobileFooterTools;
+		width: 100%;
+
+		@media screen #{$break-min-tablet}{
+			background: none;
+		}
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		 	
+		 	@media screen #{$break-min-tablet}{
+		 		border:none;
+		 	}
+		}
+
+		li{
+			line-height: 2.5em; 
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			width: 100%;
+
+			@media screen #{$break-min-tablet}{
+	 			border:none;
+	 		} 
+
+			img {
+				vertical-align:text-top;
+			}
+
+			@media screen #{$break-min-tablet}{
+				display:none;
+			}
+			
+			&.legal, &.accolade {
+				border-bottom: 0;
+				display: block;
+				font-size: 0.875em;
+				line-height: 3em;
+
+				@media screen #{$break-max-tablet}{
+					color: #555;	
+				}
+
+				a {
+					color: #555;
+
+					@media screen #{$break-min-tablet}{
+						color: #000;	
+					}	
+				}
+			}
+		}
+
+		a { 
+		 	color: #ccc;
+			display: block;
+			line-height: 2.5em;
+			
+			@media screen #{$break-min-tablet}{
+				display:inline-block;
+			} 
+		}
+	}
+
 
 
 /*   ===================================================================================================
