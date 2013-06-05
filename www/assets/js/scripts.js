@@ -2,39 +2,61 @@
 	global : {
 		init : function(){
 			v65.global.addToCartListener();
+			v65.global.backToTop();
 			v65.global.continueShopping();
-			v65.global.responsiveCleanUp();
+			v65.global.resizeLogo();
+			v65.global.scrollToSection();
+			v65.global.subMenuLink();
 		},
 		addToCartListener : function(){
 			$("[v65js=addToCart]").on("submit",function(){
 				v65.cookies.createCookie("continueShoppingURL", window.location.href);
 			});
 		},
-		continueShopping : function(){
-			$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
-		},
-		responsiveCleanUp: function(){
-			var submenuItems = $('.subMenu ul li').length;
-			if( submenuItems < 1) {
-				$('.footerMenuLink').remove();
-			}
-
+		backToTop : function(){
 			$(window).scroll(function() {
 				var browserSize = $(window).width();
 
 				if($(document).scrollTop() > 150 && browserSize < 580) {
-					$('.backtotop').css('display','block');
+					$('.backToTop').css('display','block');
 					$('.v65-productAddToCart-drilldown').addClass('v65-productAddToCart-drilldownActivate');
 				} else {
-					$('.backtotop').css('display','none');
+					$('.backToTop').css('display','none');
 					$('.v65-productAddToCart-drilldown').removeClass('v65-productAddToCart-drilldownActivate');
 				}
 			});
-
-			$('.backtotop a').click(function() {
-				$("html, body").animate({ scrollTop: 0 }, 400);
-				return false;
+		},
+		continueShopping : function(){
+			$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
+		},
+		resizeLogo : function(){
+			$(window).load(function(){
+				$(window).scroll(function(){
+					if($(this).scrollTop() > 250){
+						$(".logo").addClass('smallLogo');
+					} else if($(this).scrollTop() < 250){
+						$(".logo").removeClass('smallLogo');
+					}
+				});
 			});
+		},
+		scrollToSection : function(){
+			// Scroll to section when nav link clicked
+			$("nav a").click(function(){
+				var href = $(this).attr('href'), sectionName = href.substring(1);
+				if(href.indexOf("#") > -1){
+					$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500);
+				}
+			});
+
+			$("a[href='#Home']").click(function(){
+				$("html,body").animate({ scrollTop: 0 }, 500);
+			});
+		},
+		subMenuLink : function(){
+			if(!$('.subMenu ul li').length) {
+				$('.footerMenuLink').remove();
+			}
 		}
 	},
 	cookies : {
@@ -65,35 +87,56 @@
 	},
 	home : {
 		ajaxContent : function(){
-			$(".v65-home").remove();
+			if($(".home").length){
+				$(".v65-home").remove();
+				$(" nav li a").each(function(i){
+					var page = $(this).attr("href"), text = $(this).text(), sectionTitle = text.replace(/\s/g, '');
+					$(this).attr("href", "#"+sectionTitle);
+					if(i % 2 === 0){
+						$("footer").before('<section class="'+sectionTitle+' texture"></section>');
+					} else{
+						$("footer").before('<section class="'+sectionTitle+' solid"></section>');
+					}
+					
+					$("section."+sectionTitle).load(page + ' .innerContent', function(response){
+						$(this).prepend('<a name="'+sectionTitle+'"></a>');
 
-			$("nav li a").each(function(){
-				var page = $(this).attr("href");
-				if(page === "/Wines"){
-					return;
-				} else{
-					var text = $(this).text(),
-						sectionTitle = text.replace(/\s/g, '');
-					console.log(sectionTitle);
-					$("footer").before('<section class="'+sectionTitle+'"></section>');
-					$("section."+sectionTitle).load(page + ' .homepageContent');
-				}
-			});
+						if(response.indexOf('v65-product2Up') > -1){
+							v65.products.addThreeUpClear();
+						}
+
+						if(response.indexOf('pagePhotoGallery') > -1){
+							v65.page.initPhotoGallery();
+						}
+					});
+				});
+			}
 		}
 	},
 	page : {
 		initPhotoGallery : function(){
 			if($("#pagePhotoGallery").length){
 				$("#pagePhotoGallery").v65PhotoGallery({
-						galleryHeight : null, // This value is translated to 420px and will change the photogallery height
-						galleryWidth : null, // This value is translated to 630px and will change the photogallery width
-						/*
+					galleryHeight : null, // This value is translated to 420px and will change the photogallery height
+					galleryWidth : null // This value is translated to 630px and will change the photogallery width
+					/*
 						Uncomment the code below if you want to change how the photo gallery is displayed.
 						pauseTime : 5000, // Adjust how long the image is displayed for. Value is in milliseconds
 						animSpeed : 1000, // Adjust the transition speed between images. Value is in milliseconds
 						controlNav : false, // hide the 1,2,3 navigation
 						directionNav : false // hide the arrow navigation
 					*/
+				});
+			}
+		}
+	},
+	products : {
+		addThreeUpClear : function(){
+			if($(".v65-product2Up").length){
+				$(".v65-product2Up").each(function(i){
+					if(i % 3 === 0){
+						$(this).before('<div class="threeUpClear"></div>');
+					}
 				});
 			}
 		}
@@ -105,46 +148,3 @@
 
 v65.global.init();
 v65.home.ajaxContent();
-// v65.page.initPhotoGallery();
-
-// Scroll to section on page load
-var hash = window.location.hash, 
-	sectionName = hash.substring(1);
-
-if(hash){
-	$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500)
-}
-
-// Scroll to section when nav link clicked
-$(".menu a").click(function(){
-	var sectionName = $(this).attr("href").substring(1), href = $(this).attr("href");
-	if(href.indexOf("#") > -1){
-		$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500);
-	}
-});
-
-$("a[href='#Home']").click(function(){
-	$("html,body").animate({ scrollTop: 0 }, 500);
-});
-
-
-$(window).load(function () {
-	v65.page.initPhotoGallery();
-
-	if($(document).width() >= 580){
-		$(window).scroll(function () {
-		$(".logoWrapper").addClass("logoScroll").fadeIn("slow");
-		});
-	}
-
-	if($(document).width() >= 580){
-		$(window).scroll(function() {
-       		var scrollVal = $(this).scrollTop();
-        	if ( scrollVal > 250) {
-            	$('.logoWrapper').addClass("logoScroll").fadeIn("slow");
-        	} else {
-            	$('.logoWrapper').removeClass("logoScroll").fadeIn("slow");
-        	}
-    	});
-	}
-});

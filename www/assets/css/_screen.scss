@@ -505,7 +505,6 @@ hr {
 		height:100%;
 	}
 }
-	
 
 /*   ===================================================================================================
      3. Header
@@ -611,8 +610,7 @@ header.main{
 	
 	@media screen #{$break-max-tablet}{
 		color: #fff;
-		/*display: block;*/
-		float: left;
+		display: inline-block;
 		font-size: 16px;
 		height: 45px;
 		line-height: 45px;
@@ -815,6 +813,23 @@ nav{
 	}
 }
 
+.home{
+	.innerContent{
+		padding: 3%;
+	}
+}
+
+.texture{}
+
+.solid{
+	background-color: $backgroundColorReverse;
+	color: $fontColorReverse;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $headingColorReverse;
+	}
+}
+
 /* ----- Feature Image ----- */
 
 .featureImage{
@@ -951,8 +966,17 @@ nav{
 		display: none;
 	}
 }
+.threeUpClear{	
+	@media screen and (min-width:925px){
+		clear: both;
+		display: block;
+		font-size: 0;
+		line-height: 0;
+	}
+}
 
 .v65-product-addToCart-priceWrapper{
+	display: block;
 	
 	@media screen #{$break-min-mobile}{
 		margin-top: 20px;
@@ -976,7 +1000,7 @@ nav{
 	width:100%;
 	text-align: left;
 
-	@media screen and (min-width:600px){
+	@media screen and (min-width:605px){
 		margin: 0 2% 1em 0;
 		width:48%;
 	}
@@ -991,7 +1015,7 @@ nav{
 		text-align: left;
 		margin:0 1em 2em 0;
 
-		@media screen #{$break-min-mobile}{
+		@media screen and (min-width:605px){
 			width: 28%;
 		}
 
@@ -1351,6 +1375,10 @@ footer{
 
 #v65-signUpClubSummaryWrapper {
 	margin-bottom: 20px;
+}
+
+.v65-form, .v65-customForm{
+	max-width: 100%;
 }
 
 /* ----- Fix for overflow on FB sharing widget on mobile  ----- */
