@@ -27,52 +27,36 @@
 */
 
 //   ===================================================================================================
-//      1.a General Theme Settings
-// =====================================================================================================
-
-//   ===================================================================================================
 //	 Global Variables
 //   ===================================================================================================
 $backtoTopColor: #fff;
 $backtoTopBackground: #333;
-$backtoTopBorder: #ccc; 
+$backtoTopBorder: #ccc;
+
+$backgroundColorMobileFooterTools: #000;
+$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+
+//   ===================================================================================================
+//      1.a General Theme Settings
+// =====================================================================================================
 
 // ===============
 // General Styling
 // ===============
-///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+///$background: #fff; // Background Color or Texture
 ///$fontColor: #000; // General Font Color
 ///$headingColor: #333; // Main Heading Color
 ///$ruleColor: #666; // Horizontal Rule Color
 ///$linkColor: #369; // Main Link Color
-///$backgroundColorMobileFooterTools: #000;
-
-// ==================
-// Header Styling
-// ==================
-///$headerBackgroundColor: #000; // Header Background Color
-///$headerTextColor: #fff; // Header Text Color
-///$headerLinkColor: #fff; // Header Link Color
-///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-///$logoBackgroundColor: #333; // Background Color for the Logo Element
-///$logoBorder: 4px solid #000; // Background Color for the Logo Element
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-///$backgroundColorReverse: #333333; // Website Background Color -Reverse 
+///$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
 ///$fontColorReverse: #cccccc;
 ///$fontColorReverseHover: #fff;
 ///$headingColorReverse: #fff; // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-///$navigationColor: #fff; // Main Navigation Color
-///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
-///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
-///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
-///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
 
 // ==================
 // Button Styling
@@ -83,7 +67,6 @@ $backtoTopBorder: #ccc;
 ///$altButtonBorder: 1px solid #888;
 ///$mainButtonTextColor: #fff;
 ///$altButtonTextColor: #000;
-///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
 
 //   ===================================================================================================
 //      1.b Muted Pastel Theme Settings
@@ -92,50 +75,29 @@ $backtoTopBorder: #ccc;
 // ===============
 // General Styling
 // ===============
-$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
-$fontColor: #000; // General Font Color
-$headingColor: #333; // Main Heading Color
-$ruleColor: #666; // Horizontal Rule Color
-$linkColor: #EE6557; // Main Link Color
-$backgroundColorMobileFooterTools: #000;
-$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
-
-// ==================
-// Header Styling
-// ==================
-$headerBackgroundColor: #000; // Header Background Color
-$headerTextColor: #fff; // Header Text Color
-$headerLinkColor: #fff; // Header Link Color
-$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-$logoBackgroundColor: #333; // Background Color on the Logo in 'Desktop'
-$logoBorder: 4px solid #000; // Border on the Logo in 'Desktop'
+///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #16A6B6; // Main Heading Color
+///$ruleColor: #666; // Horizontal Rule Color
+///$linkColor: #EE6557; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-$backgroundColorReverse: #fff; // Website Background Color -Reverse 
-$fontColorReverse: #333;
-$fontColorReverseHover: lighten($fontColorReverse, 20%);
-$headingColorReverse: #16A6B6; // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-$navigationColor: #fff; // Main Navigation Color
-$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
-$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
-$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+///$backgroundReverse: #333333; // Website Background Color -Reverse 
+///$fontColorReverse: #cccccc;
+///$fontColorReverseHover: lighten($fontColorReverse, 20%);
+///$headingColorReverse: #16A6B6; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-$mainButtonColor: #16A6B6;
-$mainButtonBorder: 1px solid #16A6B6;
-$altButtonColor: #ccc;
-$altButtonBorder: 1px solid #ccc;
-$mainButtonTextColor: #fff;
-$altButtonTextColor: #000;
-$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
+///$mainButtonColor: #16A6B6;
+///$mainButtonBorder: 1px solid #16A6B6;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #ccc;
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
 
 //   ===================================================================================================
 //      1.c Blue Theme Settings
@@ -144,106 +106,32 @@ $fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Butt
 // ===============
 // General Styling
 // ===============
-///$background: lighten(#0FACF3, 10%); // Background Color or Texture
-///$fontColor: darken(#0FACF3, 30%); // General Font Color
-///$headingColor: #000; // Main Heading Color
-///$ruleColor: darken(#0FACF3, 30%); // Horizontal Rule Color
-///$linkColor: #000; // Main Link Color
-///$backgroundColorMobileFooterTools: #000;
-///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
-
-// ==================
-// Header Styling
-// ==================
-///$headerBackgroundColor: #000; // Header Background Color
-///$headerTextColor: #fff; // Header Text Color
-///$headerLinkColor: #fff; // Header Link Color
-///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-///$logoBackgroundColor: #333; // Background Color for the Logo Element
-///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+///$background: #FFFAE4; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #333; // Main Heading Color
+///$ruleColor: #ccc; // Horizontal Rule Color
+///$linkColor: #37a5ba; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-///$backgroundColorReverse: #fff; // Website Background Color -Reverse 
-///$fontColorReverse: #333;
+///$backgroundReverse: #40627C; // Website Background Color -Reverse 
+///$fontColorReverse: #FFFAE4;
 ///$fontColorReverseHover: lighten($fontColorReverse, 20%);
-///$headingColorReverse: lighten(#0FACF3, 10%); // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-///$navigationColor: #fff; // Main Navigation Color
-///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
-///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
-///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
+///$headingColorReverse: #fff; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-///$mainButtonColor: #000;
-///$mainButtonBorder: 1px solid #000;
+///$mainButtonColor: #FFCE2D;
+///$mainButtonBorder: 1px solid #FFCE2D;
 ///$altButtonColor: #ccc;
 ///$altButtonBorder: 1px solid #ccc;
-///$mainButtonTextColor: #fff;
+///$mainButtonTextColor: #000;
 ///$altButtonTextColor: #000;
-///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
 
 //   ===================================================================================================
-//      1.d Blue Theme Settings
-// =====================================================================================================
-
-// ===============
-// General Styling
-// ===============
-///$background: lighten(#8cac49, 10%); // Background Color or Texture
-///$fontColor: darken(#8cac49, 30%); // General Font Color
-///$headingColor: #000; // Main Heading Color
-///$ruleColor: darken(#8cac49, 30%); // Horizontal Rule Color
-///$linkColor: #000; // Main Link Color
-///$backgroundColorMobileFooterTools: #000;
-///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
-
-// ==================
-// Header Styling
-// ==================
-///$headerBackgroundColor: #000; // Header Background Color
-///$headerTextColor: #fff; // Header Text Color
-///$headerLinkColor: #fff; // Header Link Color
-///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-///$logoBackgroundColor: #333; // Background Color for the Logo Element
-///$logoBorder: 4px solid #000; // Background Color for the Logo Element
-
-// ==================
-// Reverse Styling - Used on Second and Fourth Sections and the Footer
-// ==================
-///$backgroundColorReverse: #fff; // Website Background Color -Reverse 
-///$fontColorReverse: #333;
-///$fontColorReverseHover: lighten($fontColorReverse, 20%);
-///$headingColorReverse: lighten(#8cac49, 10%); // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-///$navigationColor: #fff; // Main Navigation Color
-///$navigationColorHover: darken($navigationColor, 30%); // Main Navigation Hover Color
-///$navigationColorParent: darken($navigationColor, 30%); // Main Navigation Parent Color
-///$navigationColorSelected: darken($navigationColor, 30%); // Main Navigation Selected Color
-
-// ==================
-// Button Styling
-// ==================
-///$mainButtonColor: #000;
-///$mainButtonBorder: 1px solid #000;
-///$altButtonColor: #ccc;
-///$altButtonBorder: 1px solid #ccc;
-///$mainButtonTextColor: #fff;
-///$altButtonTextColor: #000;
-///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
-
-
-//   ===================================================================================================
-//      1.e Green Theme Settings
+//      1.d Yellow/Orange Theme Settings
 // =====================================================================================================
 
 // ===============
@@ -251,100 +139,89 @@ $fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Butt
 // ===============
 ///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
 ///$fontColor: #000; // General Font Color
-///$headingColor: #51652A; // Main Heading Color
-///$ruleColor: #666; // Horizontal Rule Color
-///$linkColor: lighten(#51652A, 10%); // Main Link Color
-///$backgroundColorMobileFooterTools: #000;
-
-// ==================
-// Header Styling
-// ==================
-///$headerBackgroundColor: darken(#51652A, 10%); // Header Background Color
-///$headerTextColor: #fff; // Header Text Color
-///$headerLinkColor: #fff; // Header Link Color
-///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-///$logoBackgroundColor: #000; // Background Color for the Logo Element
-///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+///$headingColor: #000; // Main Heading Color
+///$ruleColor: #000; // Horizontal Rule Color
+///$linkColor: #E2602B; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-///$backgroundColorReverse: darken(#51652A, 20%); // Website Background Color -Reverse 
-///$fontColorReverse: #fff;
-///$fontColorReverseHover: #fff;
-///$headingColorReverse: #fff; // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-///$navigationColor: #fff; // Main Navigation Color
-///$navigationColorHover: lighten(#51652A, 20%); // Main Navigation Hover Color
-///$navigationColorParent: lighten(#51652A, 20%); // Main Navigation Parent Color
-///$navigationColorSelected: lighten(#51652A, 20%); // Main Navigation Selected Color
-///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+///$backgroundReverse: #FED463; // Website Background Color -Reverse 
+///$fontColorReverse: #000;
+///$fontColorReverseHover: lighten($fontColorReverse, 20%);
+///$headingColorReverse: #000; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-///$mainButtonColor: lighten(#51652A, 20%);
-///$mainButtonBorder: 1px solid lighten(#51652A, 20%);
-///$altButtonColor: lighten(#51652A, 50%);
-///$altButtonBorder: 1px solid lighten(#51652A, 50%);
+///$mainButtonColor: #E2602B;
+///$mainButtonBorder: 1px solid #E2602B;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #ccc;
 ///$mainButtonTextColor: #fff;
 ///$altButtonTextColor: #000;
-///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
 
 //   ===================================================================================================
-//      1.f Red Theme Settings
+//      1.e Red/Gold Theme Settings
 // =====================================================================================================
 
 // ===============
 // General Styling
 // ===============
-///$background: url(../images/template/bg-texture.jpg) top center repeat #dedede; // Background Color or Texture
-///$fontColor: #000; // General Font Color
-///$headingColor: #994C44; // Main Heading Color
-///$ruleColor: #666; // Horizontal Rule Color
-///$linkColor: lighten(#994C44, 10%); // Main Link Color
-///$backgroundColorMobileFooterTools: #000;
-
-// ==================
-// Header Styling
-// ==================
-///$headerBackgroundColor: darken(#994C44, 10%); // Header Background Color
-///$headerTextColor: #fff; // Header Text Color
-///$headerLinkColor: #fff; // Header Link Color
-///$userToolsLinkColor: darken($headerLinkColor, 30%); // User Tools Link Color
-///$logoBackgroundColor: #333; // Background Color for the Logo Element
-///$logoBorder: 4px solid #000; // Background Color for the Logo Element
+$background: #f5f4e9; // Background Color or Texture
+$fontColor: #000; // General Font Color
+$headingColor: #a19335; // Main Heading Color
+$ruleColor: #000; // Horizontal Rule Color
+$linkColor: #ba624d; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-///$backgroundColorReverse: darken(#994C44, 30%); // Website Background Color -Reverse 
-///$fontColorReverse: #fff;
-///$fontColorReverseHover: #fff;
-///$headingColorReverse: #fff; // Main Heading Color -Reverse 
-
-// ==================
-// Navigation Styling
-// ==================
-///$navigationColor: #fff; // Main Navigation Color
-///$navigationColorHover: lighten(#994C44, 20%); // Main Navigation Hover Color
-///$navigationColorParent: lighten(#994C44, 20%); // Main Navigation Parent Color
-///$navigationColorSelected: lighten(#994C44, 20%); // Main Navigation Selected Color
-///$fontFamily: Arial, Helvetica, sans-serif; // Default Font Family
+$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
+$fontColorReverse: #ccc;
+$fontColorReverseHover: lighten($fontColorReverse, 20%);
+$headingColorReverse: #a19335; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-///$mainButtonColor: lighten(#994C44, 20%);
-///$mainButtonBorder: 1px solid lighten(#994C44, 20%);
-///$altButtonColor: lighten(#994C44, 50%);
-///$altButtonBorder: 1px solid lighten(#994C44, 50%);
+$mainButtonColor: #c24b2d;
+$mainButtonBorder: 1px solid #c24b2d;
+$altButtonColor: #ccc;
+$altButtonBorder: 1px solid #ccc;
+$mainButtonTextColor: #fff;
+$altButtonTextColor: #000;
+
+//   ===================================================================================================
+//      1.f Green Theme Settings
+// =====================================================================================================
+
+// ===============
+// General Styling
+// ===============
+///$background: #fff; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #333; // Main Heading Color
+///$ruleColor: #666; // Horizontal Rule Color
+///$linkColor: #5C832F; // Main Link Color
+
+// ==================
+// Reverse Styling - Used on Second and Fourth Sections and the Footer
+// ==================
+///$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
+///$fontColorReverse: #cccccc;
+///$fontColorReverseHover: #fff;
+///$headingColorReverse: #fff; // Main Heading Color -Reverse 
+
+// ==================
+// Button Styling
+// ==================
+///$mainButtonColor: #5C832F;
+///$mainButtonBorder: 1px solid #5C832F;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #888;
 ///$mainButtonTextColor: #fff;
 ///$altButtonTextColor: #000;
-///$fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Buttons
 
 //   ===================================================================================================
 //      1.c Responsive Breakpoints
@@ -511,8 +388,8 @@ hr {
 ======================================================================================================== */
 
 header.main{
-	background-color:$headerBackgroundColor;
-	color:$headerTextColor;
+	background-color: #000;
+	color:#fff;
 	position: fixed;
 	width: 100%;
 	z-index:100;
@@ -522,7 +399,7 @@ header.main{
 	}
 
 	a{
-		color:$headerLinkColor;
+		color:#fff;
 	}
 
 	.wrapper{
@@ -541,7 +418,7 @@ header.main{
 }
 
 #user-tools{
-	color:$userToolsLinkColor;
+	color:#b3b3b3;
 	border-bottom:1px solid #666;
 
 	@media screen #{$break-min-mobile}{
@@ -553,15 +430,15 @@ header.main{
 	}
 
 	a{
-		color:$userToolsLinkColor;
+		color:#b3b3b3;
 	}
 }
 
 .logo{
 	background: image-url('inverse-logo.png') no-repeat;
-	background-color: $logoBackgroundColor;
+	background-color: #333;
 	background-size: contain;
-	border: $logoBorder;
+	border: 4px solid #000;
 	display:none;
 	float: left;
 	height: 48px;
@@ -682,7 +559,7 @@ nav{
 			}
 
 			a{
-				color: $navigationColor;
+				color: #fff;
 				display:block;
 				height: 44px;
 				line-height: 44px;
@@ -700,7 +577,7 @@ nav{
 				}
 
 				&:hover{
-					color: $navigationColorHover;
+					color: #ccc;
 					text-decoration: none;
 				}
 			}
@@ -822,7 +699,7 @@ nav{
 .texture{}
 
 .solid{
-	background-color: $backgroundColorReverse;
+	background: $backgroundReverse;
 	color: $fontColorReverse;
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1207,7 +1084,7 @@ a{
 
 footer{
 	width:100%;
-	background-color: $backgroundColorReverse;
+	background: $backgroundReverse;
 	color: $fontColorReverse;
 
 	h1, h2, h3, h4, h5, h6 {

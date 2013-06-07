@@ -703,7 +703,7 @@ a.nivo-nextNav {
      2. Typography - These get copied into the admin.css
 ======================================================================================================== */
 body {
-  background: url(../images/template/bg-texture.jpg) top center repeat #dedede;
+  background: #f5f4e9;
   font-size: 12px;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -711,7 +711,7 @@ body {
 }
 
 a {
-  color: #ee6557;
+  color: #ba624d;
   text-decoration: none;
 }
 a:hover, a:focus, a:active {
@@ -728,7 +728,7 @@ ul, ol, dl, p, table, pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #333333;
+  color: #a19335;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
   margin: 0;
@@ -796,13 +796,13 @@ form {
 }
 
 legend {
-  color: #333333;
+  color: #a19335;
 }
 
 hr {
-  background-color: #666666;
+  background-color: black;
   border: 0;
-  color: #666666;
+  color: black;
   height: 1px;
 }
 
@@ -844,8 +844,8 @@ hr {
      3. Header
 ======================================================================================================== */
 header.main {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -856,7 +856,7 @@ header.main {
   }
 }
 header.main a {
-  color: white;
+  color: #fff;
 }
 header.main .wrapper {
   margin: 0 auto;
@@ -893,10 +893,10 @@ header.main .wrapper {
 }
 
 .logo {
-  background: url('../images/inverse-logo.png?1370023199') no-repeat;
-  background-color: #333333;
+  background: url('../images/inverse-logo.png?1370388472') no-repeat;
+  background-color: #333;
   background-size: contain;
-  border: 4px solid black;
+  border: 4px solid #000;
   display: none;
   float: left;
   height: 48px;
@@ -1021,7 +1021,7 @@ nav ul li {
   }
 }
 nav ul li a {
-  color: white;
+  color: #fff;
   display: block;
   height: 44px;
   line-height: 44px;
@@ -1040,7 +1040,7 @@ nav ul li a {
   }
 }
 nav ul li a:hover {
-  color: #b3b3b3;
+  color: #ccc;
   text-decoration: none;
 }
 nav ul li.v65-home {
@@ -1156,11 +1156,11 @@ nav ul li.v65-home {
 }
 
 .solid {
-  background-color: white;
-  color: #333333;
+  background: url(../images/template/bg-texture-dark.jpg) top center repeat #333333;
+  color: #cccccc;
 }
 .solid h1, .solid h2, .solid h3, .solid h4, .solid h5, .solid h6 {
-  color: #16a6b6;
+  color: #a19335;
 }
 
 /* ----- Feature Image ----- */
@@ -1425,8 +1425,8 @@ button.modalBtn, button.altModalBtn {
   }
 }
 button.defaultBtn, button.modalBtn, button.largeBtn {
-  background: #16a6b6;
-  border: 1px solid #16a6b6;
+  background: #c24b2d;
+  border: 1px solid #c24b2d;
   border-radius: 0.385em;
   color: white;
   text-align: center;
@@ -1440,7 +1440,7 @@ button.defaultBtn span, button.modalBtn span, button.largeBtn span {
   border-radius: 0.385em;
 }
 button.defaultBtn:hover, button.modalBtn:hover, button.largeBtn:hover {
-  background: #1bcfe4;
+  background: #d6684c;
 }
 button.altBtn, button.altModalBtn, button.altLargeBtn {
   background: #cccccc;
@@ -1465,8 +1465,8 @@ button.altBtn:hover span, button.altModalBtn:hover span, button.altLargeBtn:hove
 }
 
 a.linkBtn, a.modalLinkBtn, a.largeLinkBtn, a.fullWidthBtn {
-  background: #16a6b6;
-  border: 1px solid #16a6b6;
+  background: #c24b2d;
+  border: 1px solid #c24b2d;
   border-radius: 0.385em;
   color: white;
   text-align: center;
@@ -1477,15 +1477,15 @@ a.linkBtn, a.modalLinkBtn, a.largeLinkBtn, a.fullWidthBtn {
 }
 a.linkBtn span, a.modalLinkBtn span, a.largeLinkBtn span, a.fullWidthBtn span {
   color: white;
-  background: #16a6b6;
+  background: #c24b2d;
   border-radius: 0.385em;
 }
 a.linkBtn:hover, a.modalLinkBtn:hover, a.largeLinkBtn:hover, a.fullWidthBtn:hover {
-  background: #1bcfe4;
+  background: #d6684c;
   text-decoration: none;
 }
 a.linkBtn:hover span, a.modalLinkBtn:hover span, a.largeLinkBtn:hover span, a.fullWidthBtn:hover span {
-  background: #1bcfe4;
+  background: #d6684c;
 }
 a.fullWidthBtn {
   display: block;
@@ -1523,8 +1523,8 @@ a.modalLinkBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
 ======================================================================================================== */
 footer {
   width: 100%;
-  background-color: white;
-  color: #333333;
+  background: url(../images/template/bg-texture-dark.jpg) top center repeat #333333;
+  color: #cccccc;
   width: 100%;
 }
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
@@ -1532,13 +1532,13 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 }
 @media screen and (min-width: 836px) {
   footer {
-    color: #333333;
+    color: #cccccc;
     padding: 1em 0;
     text-align: center;
   }
 }
 footer a {
-  color: #333333;
+  color: #cccccc;
 }
 footer .wrapper {
   padding: 0;
@@ -1591,13 +1591,13 @@ footer .wrapper {
 }
 @media screen and (min-width: 836px) {
   .footerNav a {
-    color: #333333;
+    color: #cccccc;
     display: inline-block;
     font-size: 0.917em;
     position: relative;
   }
   .footerNav a:hover {
-    color: #666666;
+    color: white;
   }
 }
 
