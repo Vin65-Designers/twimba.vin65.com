@@ -4,7 +4,6 @@
 			v65.global.addToCartListener();
 			v65.global.backToTop();
 			v65.global.continueShopping();
-			v65.global.scrollToSection();
 			v65.global.subMenuLink();
 		},
 		addToCartListener : function(){
@@ -27,19 +26,6 @@
 		},
 		continueShopping : function(){
 			$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
-		},
-		scrollToSection : function(){
-			// Scroll to section when nav link clicked
-			$("nav a").click(function(){
-				var href = $(this).attr('href'), sectionName = href.substring(1);
-				if(href.indexOf("#") > -1){
-					$("html,body").animate({ scrollTop: $("a[name="+sectionName+"]").offset().top - 75 }, 500);
-				}
-			});
-
-			$("a[href='#Home']").click(function(){
-				$("html,body").animate({ scrollTop: 0 }, 500);
-			});
 		},
 		subMenuLink : function(){
 			if(!$('.subMenu ul li').length) {
@@ -76,33 +62,8 @@
 	home : {
 		init : function(){
 			if($(".home").length){
-				v65.home.ajaxContent();
 				v65.home.resizeLogo();
 			}
-		},
-		ajaxContent : function(){
-			$(".v65-home").remove();
-			$(" nav li a").each(function(i){
-				var page = $(this).attr("href"), text = $(this).text(), sectionTitle = text.replace(/\s/g, '');
-				$(this).attr("href", "#"+sectionTitle);
-				if(i % 2 === 0){
-					$("footer").before('<section class="'+sectionTitle+' texture"></section>');
-				} else{
-					$("footer").before('<section class="'+sectionTitle+' solid"></section>');
-				}
-				
-				$("section."+sectionTitle).load(page + ' .innerContent', function(response){
-					$(this).prepend('<a name="'+sectionTitle+'"></a>');
-
-					if(response.indexOf('v65-product2Up') > -1){
-						v65.products.addThreeUpClear();
-					}
-
-					if(response.indexOf('pagePhotoGallery') > -1){
-						v65.page.initPhotoGallery();
-					}
-				});
-			});
 		},
 		resizeLogo : function(){
 			$(window).load(function(){
@@ -117,6 +78,9 @@
 		}
 	},
 	page : {
+		init : function(){
+			v65.page.initPhotoGallery();
+		},
 		initPhotoGallery : function(){
 			if($("#pagePhotoGallery").length){
 				$("#pagePhotoGallery").v65PhotoGallery({
@@ -151,3 +115,4 @@
 
 v65.global.init();
 v65.home.init();
+v65.page.init();

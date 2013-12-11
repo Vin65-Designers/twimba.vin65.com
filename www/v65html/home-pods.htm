@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<v65:metaTags></v65:metaTags>
+
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+	<!--//Vin65 QuickLaunch//-->
+	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
+	<!--//Vin65 QuickLaunch//-->
+
+	<v65:css files="/assets/css/screen.min.css">
+
+	<!--[if lte IE 9]>
+		<script src="/assets/js/respond.min.js"></script>
+		<script src="/assets/js/html5shiv-printshiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div class="headerWrapper v65-group">
+
+	<!--header-->
+	<div class="header v65-group">
+
+		<!--user-tools-->
+		<section id="user-tools" class="v65-group">
+			<v65:modalCart></v65:modalCart>	
+			<v65:login></v65:login>
+		</section>
+		<!--/user-tools-->
+		
+		<!--header-->
+		<header class="logoWrapper v65-group">
+			<a href="/" accesskey="h" class="logo"><img src="../assets/images/inverse-logo.png" alt="<v65:websiteName></v65:websiteName>"></a>
+		</header>
+		<!--/header-->
+		
+		<!--nav-->
+		<nav class="v65-group">
+			<a href="#footer" class="menuLink"><i class="icon-menu"></i></a>
+			<ul class="menu">
+				<li style="display:none;"><a href="#featureImage">Home</a></li>
+				<li><a href="#Wines">Wines</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#Clubs">Clubs</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
+		<!--/nav-->
+		
+	</div>
+	<!--/header-->
+	
+</div>
+
+<div id="featureImage" class="v65-group">
+<a name="Home"></a> 
+	<img src="../assets/images/template/feature-image.jpg">
+</div>
+
+<div id="winesWrapper" class="v65-group">
+	<a name="Wines"></a> 
+
+	<!--homepageContent-->
+	<section class="homepageContent v65-group">
+	
+		<article class="v65-group">
+			
+			<div class="homepageProductGroup v65-group">
+				<v65:product:group code="HomepageProductGroup"></v65:product:group>
+			</div>
+			
+		</article>
+		
+	</section>
+	<!--/homepageContent-->
+	
+</div>
+
+<div id="eventsWrapper" class="v65-group">
+	<a name="Events"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="eventMainContent v65-group">
+					<v65:pods location="Events Content" type="description"></v65:pods> 
+				</div>
+				<div class="eventRightContent v65-group">
+					<v65:pods location="Events Right Content" type="description"></v65:pods> 
+				</div>
+			
+			</article>
+		
+		</section>
+</div>
+
+<div id="clubWrapper" class="v65-group">
+	<a name="Clubs"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="clubMainContent v65-group">
+					<v65:pods location="Club Content" type="description"></v65:pods> 
+				</div>
+				<div class="clubRightContent v65-group">
+					<v65:pods location="Club Right Content" type="description"></v65:pods> 
+				</div>
+				
+			</article>
+			 
+		</section> 
+</div>
+
+<div id="aboutUsWrapper" class="v65-group">
+	<a name="About"></a>
+	<div id="slider">
+	</div>
+	
+	<section class="homepageContent v65-group">
+	
+		<div class="aboutUsContent v65-group">
+			<v65:pods location="About Us Photogallery" type="description"></v65:pods> 
+		</div>
+	
+	</section>
+	
+</div>
+
+<div id="contactWrapper" class="v65-group">
+	<a name="Contact"></a>
+		<section class="homepageContent v65-group">
+		
+			<article class="v65-group">
+			
+				<div class="contactMainContent v65-group">
+					<v65:pods location="Contact Us Content" type="description"></v65:pods> 
+				</div>
+				<div class="contactRightContent v65-group">
+					<v65:pods location="Contact Us Right Content" type="description"></v65:pods> 
+				</div>
+			
+			</article>
+			
+		</section> 
+</div>
+	
+<footer class="v65-group">
+	
+	<!--footer-->
+	<div class="footer">
+		
+		<!--footer_nav-->
+		<div class="footerNav">
+			<a name="footerNav"></a> 
+			<v65:layoutFooterNav></v65:layoutFooterNav>
+		</div>
+		<!--/footer_nav-->
+
+		<div class="footerTools">
+			<ul>
+				<v65:contentBlock group="Contact Details"></v65:contentBlock>
+				<li class="social">
+					<a href="http://www.facebook.com"><i class="icon-facebook-squared icon-large"></i></a>
+					<a href="http://www.twitter.com"><i class="icon-twitter icon-large"></i></a>
+					<a href="http://www.pinterest.com"><i class="icon-pinterest icon-large"></i></a>
+					<a href="https://plus.google.com"><i class="icon-gplus icon-large"></i></a>
+				</li>
+				<li class="legal"><v65:copyright></v65:copyright></li>
+				<li class="accolade"><v65:vin65Accolade></v65:vin65Accolade></li>
+			</ul>
+		</div>
+		
+</footer>
+
+<v65:js files="/assets/js/scripts.js,/assets/nivo/jquery.nivo.slider.pack.js">
+
+<!--//Vin65 QuickLaunchFooter//-->
+<script src="http://assets.vin65.com/js/vin65Footer.js" type="text/javascript"></script>     
+<!--//Vin65 QuickLaunchFooter//-->
+
+</body>
+</html>

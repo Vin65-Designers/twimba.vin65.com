@@ -44,29 +44,29 @@ $fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Butt
 // ===============
 // General Styling
 // ===============
-///$background: #fff; // Background Color or Texture
-///$fontColor: #000; // General Font Color
-///$headingColor: #333; // Main Heading Color
-///$ruleColor: #666; // Horizontal Rule Color
-///$linkColor: #369; // Main Link Color
+$background: #fff; // Background Color or Texture
+$fontColor: #000; // General Font Color
+$headingColor: #333; // Main Heading Color
+$ruleColor: #666; // Horizontal Rule Color
+$linkColor: #369; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-///$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
-///$fontColorReverse: #cccccc;
-///$fontColorReverseHover: #fff;
-///$headingColorReverse: #fff; // Main Heading Color -Reverse 
+$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
+$fontColorReverse: #cccccc;
+$fontColorReverseHover: #fff;
+$headingColorReverse: #fff; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-///$mainButtonColor: #369;
-///$mainButtonBorder: 1px solid #163655;
-///$altButtonColor: #ccc;
-///$altButtonBorder: 1px solid #888;
-///$mainButtonTextColor: #fff;
-///$altButtonTextColor: #000;
+$mainButtonColor: #369;
+$mainButtonBorder: 1px solid #163655;
+$altButtonColor: #ccc;
+$altButtonBorder: 1px solid #888;
+$mainButtonTextColor: #fff;
+$altButtonTextColor: #000;
 
 //   ===================================================================================================
 //      1.b Muted Pastel Theme Settings
@@ -168,29 +168,29 @@ $fontFamilyButton: Arial, Helvetica, sans-serif; // Default Font Family for Butt
 // ===============
 // General Styling
 // ===============
-$background: #f5f4e9; // Background Color or Texture
-$fontColor: #000; // General Font Color
-$headingColor: #a19335; // Main Heading Color
-$ruleColor: #000; // Horizontal Rule Color
-$linkColor: #ba624d; // Main Link Color
+///$background: #f5f4e9; // Background Color or Texture
+///$fontColor: #000; // General Font Color
+///$headingColor: #a19335; // Main Heading Color
+///$ruleColor: #000; // Horizontal Rule Color
+///$linkColor: #ba624d; // Main Link Color
 
 // ==================
 // Reverse Styling - Used on Second and Fourth Sections and the Footer
 // ==================
-$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
-$fontColorReverse: #ccc;
-$fontColorReverseHover: lighten($fontColorReverse, 20%);
-$headingColorReverse: #a19335; // Main Heading Color -Reverse 
+///$backgroundReverse: url(../images/template/bg-texture-dark.jpg) top center repeat #333; // Website Background Color -Reverse 
+///$fontColorReverse: #ccc;
+///$fontColorReverseHover: lighten($fontColorReverse, 20%);
+///$headingColorReverse: #a19335; // Main Heading Color -Reverse 
 
 // ==================
 // Button Styling
 // ==================
-$mainButtonColor: #c24b2d;
-$mainButtonBorder: 1px solid #c24b2d;
-$altButtonColor: #ccc;
-$altButtonBorder: 1px solid #ccc;
-$mainButtonTextColor: #fff;
-$altButtonTextColor: #000;
+///$mainButtonColor: #c24b2d;
+///$mainButtonBorder: 1px solid #c24b2d;
+///$altButtonColor: #ccc;
+///$altButtonBorder: 1px solid #ccc;
+///$mainButtonTextColor: #fff;
+///$altButtonTextColor: #000;
 
 //   ===================================================================================================
 //      1.f Green Theme Settings
@@ -245,7 +245,9 @@ $break-min-desktop: "and (min-width : 1024px)";
 /*   ===================================================================================================
      2. Typography - These get copied into the admin.css
 ======================================================================================================== */
-
+html,body {
+	height: 100%;
+}
 body{
 	background: $background;
 	font-size: 12px;
@@ -348,7 +350,7 @@ hr {
 	height: 1px;
 }
 
-.backtotop {
+.backToTop {
 	display: none;
 
 	@media screen and (max-width : 680px) {
@@ -390,7 +392,6 @@ hr {
 header.main{
 	background-color: #000;
 	color:#fff;
-	position: fixed;
 	width: 100%;
 	z-index:100;
 
@@ -434,45 +435,68 @@ header.main{
 	}
 }
 
-.logo{
-	background: image-url('inverse-logo.png') no-repeat;
-	background-color: #333;
-	background-size: contain;
-	border: 4px solid #000;
-	display:none;
-	float: left;
-	height: 48px;
-	width:75px;
+#v65-modalCart {
+	padding-right: 10px !important;
 
-	&.smallLogo{
-		background-color: transparent;
-		border: none;
-		height:75px;
-		width:120px;
+	@media screen and (min-width: 1024px) {
+		padding: 0 !important;
+	}
+}
+
+
+
+.logoWrapper {
+	@media screen #{$break-max-mobile} {
+		margin: 0 auto;
+		width: 120px;
 	}
 
-	h1{
-		margin: 0;
-		height: 100%;
-	}
-
-	@media screen #{$break-min-mobile}{
+	.logo{
+		background: image-url('inverse-logo.png') no-repeat;
+		background-size: contain;
+		border: 4px solid #000;
 		display:block;
-		position: absolute;
-		z-index: 100;
-		top: 0;
-		left: 0;
-		height:75px;
+		float: left;
+		height: 75px;
+		margin-left: 1%;
 		width:120px;
-	}
-	@media screen #{$break-min-tablet}{
-		width: 250px;
-		height: 160px;
-		text-align:center;
-	}
 
-	img{
-		height: 100%;
+		&.smallLogo{
+			background-color: transparent;
+			border: none;
+			height:75px;
+			width:120px;
+		}
+
+		h1{
+			margin: 0;
+			height: 100%;
+		}
+
+		@media screen #{$break-min-mobile}{
+			background-color: #333;
+			display:block;
+			position: absolute;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			height: 160px;
+			width: 250px;
+			text-align:center;
+		}
+
+		@media screen and (min-width: 581px) and (max-width: 650px) {
+			height: 120px;
+			width: 187.5px;
+		}
+
+		@media screen #{$break-max-mobile} {
+			margin: 0;
+		}
+
+		img{
+			height: 100%;
+		}
 	}
 }
 
@@ -485,7 +509,7 @@ header.main{
 .menuLink {
 	display:none;
 	
-	@media screen #{$break-max-tablet}{
+	@media screen #{$break-max-mobile}{
 		color: #fff;
 		display: inline-block;
 		font-size: 16px;
@@ -503,29 +527,19 @@ header.main{
 /* ----- a. Main Menu ----- */
 
 nav{
+	float: right;
 	font-size: 13px;
 	height:100%;
 	width: 100%;
 	z-index: 101;
 	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: right;
 	text-transform: uppercase;
 	
-	@media screen #{$break-max-tablet}{
+	@media screen #{$break-max-mobile}{
+		float: left;
 		text-align: center;
 		}
-	@media screen #{$break-tablet}{
-		float:right;
-		width: 65%;//640px
-		position: relative;
-		margin: 0 10px 0 0;
-		}
-	@media screen #{$break-min-desktop}{
-		float:right;
-		height: 24px;
-		width: 640px;
-		position: relative;
-		margin: 0;
-	}
 
 	ul{
 		margin: 0;
@@ -535,7 +549,12 @@ nav{
 		@media screen #{$break-min-tablet}{
 			float:right;
 			margin:0;
+			
 			text-align: left;
+		}
+
+		@media screen #{$break-max-desktop}{
+			padding-right: 10px;
 		}
 
 		li{
@@ -676,16 +695,24 @@ nav{
 	margin: 0 auto;
 	padding: 3%;
 	position: relative;
-	height: 100%;
+	//height: 100%;
 	max-width: 900px;
 
 	&.innerContent{
 		padding-bottom: 0;
-		padding-top: 28%;
+		padding-top: 185px;
 
 		@media screen #{$break-min-mobile}{
 			padding-bottom: 30px;
-			padding-top: 120px;
+			padding-top: 130px;
+		}
+
+		@media screen and (max-width: 650px) {
+			padding-top: 100px;
+		}
+
+		@media screen #{$break-max-mobile} {
+			padding-top: 30px;
 		}
 	}
 }
@@ -693,6 +720,109 @@ nav{
 .home{
 	.innerContent{
 		padding: 3%;
+	}
+}
+
+.homepageContent {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 450px;
+
+	@media screen and (max-width: 1000px) {
+		top: 375px;
+	}
+
+	@media screen #{$break-max-mobile} {
+		background: #000;
+		float: left;
+		padding: 0;
+		position: relative;
+		top: 0;
+	}
+
+	.wrapper {
+		padding: 0 !important;
+		max-width: 950px;
+	}
+
+	.homepageText {
+		background: rgb(255, 255, 255);
+		background: rgba(255, 255, 255, 0.9);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: left;
+		padding: 1.5em;
+		width: 63%;
+
+		@media screen and (max-width: 1000px) {
+			margin: 0 1%;
+			width: 48%;
+		}
+
+		@media screen #{$break-max-mobile} {
+			border-top: 2px solid #000;
+			margin: 0;
+			width: 100%;
+		}
+	}
+
+	.homepageProductGroup {
+		background: rgb(255, 255, 255);
+		background: rgba(255, 255, 255, 0.9);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: right;
+		padding: 1.5em;
+		width: 35%;
+
+		@media screen and (max-width: 1000px) {
+			margin: 0 1%;
+			width: 48%;
+		}
+
+		@media screen #{$break-max-mobile} {
+			border-top: 2px solid #000;
+			float: left;
+			margin: 0;
+			width: 100%;
+		}
+
+		.v65-productGroup-product {
+			text-align: left;
+			width: 90%;
+
+			.v65-product-title a {
+				color: $headingColor;
+				font: bold 25px/1.2 Georgia, "Times New Roman", Times, serif;
+				margin: 0.25em 0 0.5em;
+			}
+
+			.productLeftCol {
+				float: left;
+				width: 25%;
+				margin-right: 5%;
+
+				.v65-product-photo {
+
+				}
+			}	
+
+			.productRightCol {
+				float: right;
+				width: 70%;
+			}
+		}
+
+		.v65-productGroup-title {
+			display: none;
+		}
+	}
+
+	.v65-productGroup {
+		margin-bottom: 0;
 	}
 }
 
@@ -713,12 +843,33 @@ nav{
 	background-color: #000;
 	line-height: 0;
 	margin: 0 auto;
-	min-height: 100%;
-	overflow:hidden;
+	min-height: 875px;
 	text-align: center;
 	width: auto;
 
+	div.homepageFeatureImage {
+		height: 875px;
+		background-size: 100% !important;
+
+		@media screen and (max-width: 1400px) {
+			width: 1400px;
+			background-size: initial !important;
+		}
+
+		@media screen #{$break-max-mobile} {
+			background-size: cover !important;
+			height: 315px;
+			width: 100%;
+		}
+	}
+
+	@media screen #{$break-max-tablet}{
+		min-height: 0;
+		padding-top: 0;
+	}
+
 	@media screen #{$break-min-tablet}{
+
 		padding-top:0;
 	}
 
@@ -764,6 +915,7 @@ nav{
 
 	.v65-pod{
 		margin-bottom:50px;
+		width:100%;
 
 		@media screen and (min-width : 480px) and (max-width : 767px){
 			width:35%;
@@ -834,15 +986,68 @@ nav{
 	}
 }
 
+.col2 {
+	float: left;
+	margin-left: 6%;
+	width: 47%;
+
+	img {
+		max-width: 100%;
+	}
+
+	&:first-child {
+		float: left;
+		margin-left: 0%;
+		width: 47%;
+	}
+
+	@media screen #{$break-max-mobile}{
+		float: none;
+		margin-left: 0;
+		margin-bottom: 1.5em;
+		width: 100%;
+
+		&:first-child {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+.col3 {
+	float: left;
+	margin-right: 6%;
+	width: 72%;
+
+	img {
+		max-width: 100%;
+	}
+
+	@media screen #{$break-max-mobile}{
+		float: none;
+		margin-left: 0;
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+}
+
+.col1 {
+	float: left;
+	width: 22%;
+
+	img {
+		max-width: 100%;
+	}
+
+	@media screen #{$break-max-mobile}{
+		float: none;
+		width: 100%;
+	}
+}
+
 /*   ===================================================================================================
      6. Products
 ======================================================================================================== */
-
-.v65-clear{
-	@media screen and (min-width:925px){
-		display: none;
-	}
-}
 .threeUpClear{	
 	@media screen and (min-width:925px){
 		clear: both;
@@ -882,9 +1087,9 @@ nav{
 		width:48%;
 	}
 
-	@media screen and (min-width:925px){
+	/*@media screen and (min-width:925px){
 		width:31%;
-	}
+	}*/
 
 	.v65-product-photo {
 		width: 12%;
@@ -919,19 +1124,27 @@ nav{
 	}
 }
 
-/* ----- Drilldown ----- */
+.v65-product3Up {
+	float: left;
+	width: 32%;
+	margin: 0 1% 3em 0;
 
-.v65-productWrapper{
-	padding: 0;
-	
-	.productTitle {
+	.v65-product-photo {
+		float: left;
+		width: 40%;
+	}
+
+	.v65-product-infoWrapper {
 		float: right;
-		width: 62.5%;
-		
-		@media screen and (max-width : 680px) {
-			float: none; 
-			text-align: center;
-			width: 100%; 
+		text-align: left;
+		width: 60%;
+	}
+
+	@media screen and (max-width: 893px) {
+		width: 48%;
+
+		& + .v65-clear {
+			clear: none;
 		}
 	}
 }
@@ -964,9 +1177,9 @@ button{
 	&.modalBtn, &.altModalBtn{
 		font-size: 0.833em; /* 10px; */
 		
-		@media screen #{$break-min-tablet}{
-			height: 1.7em;
-			line-height: 1.7em;
+		@media screen #{$break-min-mobile}{
+			height: 2.5em;
+			line-height: 2.5em;
 		}
 	}
 
@@ -1080,7 +1293,20 @@ a{
 /*   ===================================================================================================
      9. Footer	
 ======================================================================================================== */
-
+section .wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -205px;
+}
+footer, .push {
+	height: 205px;
+}
+.homepageContent + footer {
+	@media screen #{$break-max-mobile} {
+		float: left;
+	}
+}
 
 footer{
 	width:100%;
@@ -1095,7 +1321,6 @@ footer{
 
 	@media screen #{$break-min-tablet}{
 		color: $fontColorReverse;
-		padding: 1em 0;
 		text-align: center;
 
 	}
@@ -1108,7 +1333,10 @@ footer{
 		padding: 0;
 
 		@media screen #{$break-min-tablet}{
-			padding: 3%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 20px;
 		}
 	}
 }
@@ -1221,16 +1449,32 @@ footer{
 					}	
 				}
 			}
+
+			&.social {
+				border-bottom: 0;
+				display: block;
+				font-size: 1em;
+				line-height: 3.5em;
+
+				a {
+					color: $linkColor;
+					display: inline !important;
+				}
+			}
 		}
 
 		a { 
-		 	color: #ccc;
+		 	color: $linkColor;
 			display: block;
 			line-height: 2.5em;
 			
 			@media screen #{$break-min-tablet}{
 				display:inline-block;
 			} 
+		}
+
+		.icon-large {
+			font-size: 1.5em;
 		}
 	}
 
@@ -1256,6 +1500,12 @@ footer{
 
 .v65-form, .v65-customForm{
 	max-width: 100%;
+}
+
+#v65-modalCart {
+	a span {
+		text-align: center;
+	}
 }
 
 /* ----- Fix for overflow on FB sharing widget on mobile  ----- */
@@ -1302,7 +1552,7 @@ iframe{
 
 	img.v65-right { 
 
-		@media screen and (max-width: 580px){
+		@media screen #{$break-max-mobile}{
 			width: auto !important;	
 		}
 

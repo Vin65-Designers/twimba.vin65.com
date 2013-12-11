@@ -45,3 +45,34 @@ img.v65-border { border: 1px solid #ccc; padding: 3px; }
 	.small a 	{ font-weight: bold; }
 .smaller 			{ font-size: 0.834em; }
 	.smaller a 	{ font-weight: bold; }
+
+.col2 {
+  float: left;
+  margin-left: 6%;
+  width: 47%;
+}
+.col2 img {
+  max-width: 100%;
+}
+.col2:first-child {
+  float: left;
+  margin-left: 0%;
+  width: 47%;
+}
+
+.col3 {
+  float: left;
+  margin-right: 6%;
+  width: 72%;
+}
+.col3 img {
+  max-width: 100%;
+}
+
+.col1 {
+  float: left;
+  width: 22%;
+}
+.col1 img {
+  max-width: 100%;
+}

@@ -11,8 +11,6 @@
 	
 	<cf_vin65GlobalAssets>
 
-	<cf_css files="//s3.amazonaws.com/assetss3.vin65.com/css/vin65-responsive.min.css,/assets/css/screen.min.css">
-
 	<!--[if lt IE 9]><script src="/assets/js/respond.min.js"></script><![endif]-->
 
 </head>
@@ -20,6 +18,11 @@
 
 	<img src="/assets/images/email/header.gif" alt="<cf_websiteName>" />
 	<cf_mainContent>
+
+	<p style="text-align: center;">
+		<span style="font-weight: bold;"><cf_websiteName></span><br>
+		111 North Street, Our City, CA (707) 888-9090
+	</p>
 	
 	<cf_vin65GlobalFooterAssets>
 

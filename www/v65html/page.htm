@@ -15,8 +15,6 @@
 	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
 	<!--//Vin65 QuickLaunch//-->
 
-	<link rel="stylesheet" href="//s3.amazonaws.com/assetss3.vin65.com/css/vin65-responsive.min.css" type="text/css">
-
 	<v65:css files="/assets/css/screen.min.css">
 
 	<!--[if lte IE 9]>
@@ -28,7 +26,7 @@
 <body>
 
 	<div class="backToTop">	
-		<a href="/"><i class="icon-up-bold"></i>TOP</a>
+		<a href="#"><i class="icon-up-bold"></i>TOP</a>
 	</div>
 
 	<header class="main">
@@ -38,12 +36,14 @@
 				<v65:login></v65:login>
 			</section>
 
-			<a href="#Home" accesskey="h" class="logo smallLogo hideText">
-				<h1><v65:websiteName></v65:websiteName></h1>
-			</a>
+			<div class="logoWrapper">
+				<a href="/" accesskey="h" class="logo hideText">
+					<h1><v65:websiteName></v65:websiteName></h1>
+				</a>
+			</div>
 
 			<nav>
-				<a href="#footer" class="menuLink">&#9776;</a>
+				<a href="#footer" class="menuLink"><i class="icon-menu"></i></a>
 				<v65:layoutHeaderNav></v65:layoutHeaderNav>
 			</nav>
 		</div>
@@ -51,8 +51,7 @@
 
 	<section>
 		<div class="wrapper innerContent v65-group">
-			<h2 class="pageTitle"><v65:pageTitle></v65:pageTitle></h2>
-
+			
 			<article class="page">
 				<v65:mainContent></v65:mainContent>
 			</article>
@@ -63,6 +62,7 @@
 				<v65:layoutLeftNav></v65:layoutLeftNav>
 			</aside>
 		</div>
+		<div class="push"></div>
 	</section>
 
 	<footer>
@@ -75,6 +75,12 @@
 			<div class="footerTools">
 				<ul>
 					<v65:contentBlock group="Contact Details"></v65:contentBlock>
+					<li class="social">
+						<a href="http://www.facebook.com"><i class="icon-facebook-squared icon-large"></i></a>
+						<a href="http://www.twitter.com"><i class="icon-twitter icon-large"></i></a>
+						<a href="http://www.pinterest.com"><i class="icon-pinterest icon-large"></i></a>
+						<a href="https://plus.google.com"><i class="icon-gplus icon-large"></i></a>
+					</li>
 					<li class="legal"><v65:copyright></v65:copyright></li>
 					<li class="accolade"><v65:vin65Accolade></v65:vin65Accolade></li>
 				</ul>

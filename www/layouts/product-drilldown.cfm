@@ -39,7 +39,14 @@
 
           <cf_product_description>
 
-          <cf_wine_profile>
+           <div class="v65-productDrilldown-specs2">
+
+               <cf_wine_specs>
+               <cf_product_media>
+
+         </div>
+
+         <cf_wine_profile>
 
           <cf_product_reviews>
 
