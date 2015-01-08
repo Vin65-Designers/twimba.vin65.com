@@ -27,51 +27,33 @@
 </head>
 <body>
 
-<div class="headerWrapper v65-group">
-
-	<!--header-->
-	<div class="header v65-group">
-
-		<!--user-tools-->
-		<div id="user-tools" class="v65-group">
-			<v65:modalCart></v65:modalCart>	
-			<v65:login></v65:login>
-		</div>
-		<!--/user-tools-->
-		
-		<!--header-->
-		<header class="logoWrapper2 v65-group">
-			<a href="/" accesskey="h" class="logo"><img src="../assets/images/inverse-logo.png" alt="<v65:websiteName></v65:websiteName>"></a>
-		</header>
-		<!--/header-->
-		
-		<!--nav-->
-		<nav class="v65-group">
-			<a href="#footer" class="menuLink"><i class="icon-menu"></i></a>
-			<ul class="menu">
-				<li style="display:none;"><a href="#featureImage">Home</a></li>
-				<li><a href="/#Wines">Wines</a></li>
-				<li><a href="/#Events">Events</a></li>
-				<li><a href="/#Clubs">Clubs</a></li>
-				<li><a href="/#About">About</a></li>
-				<li><a href="/#Contact">Contact</a></li>
-			</ul>
-		</nav>
-		<!--/nav-->
-		
-	</div>
-	<!--/header-->
-	
-</div>
-
-<div class="wrapper v65-group">
-
-	<div class="backtotop">	
+<div class="backToTop">	
 		<a href="#"><i class="icon-up-bold"></i>TOP</a>
 	</div>
+
+	<header class="main">
+		<div class="wrapper v65-group">
+			<section id="user-tools" class="v65-group">
+				<v65:modalCart></v65:modalCart>	
+				<v65:login></v65:login>
+			</section>
+
+			<div class="logoWrapper">
+				<a href="/" accesskey="h" class="logo hideText">
+					<h1><v65:websiteName></v65:websiteName></h1>
+				</a>
+			</div>
+			<nav>
+				<a href="#footer" class="menuLink"><i class="icon-menu"></i></a>
+				<v65:layoutHeaderNav></v65:layoutHeaderNav>
+			</nav>
+		</div>
+	</header>
+
 	
-	<!--content-->
-	<article class="content v65-group">
+	<section>
+		
+	<div class="wrapper innerContent v65-group">
 		
 		<!--blogContent-->
 		<div class="blogContent">
@@ -105,9 +87,12 @@
 		<!--/blogRightWrapper-->	
 		
 	</article>
-	<!--/content-->
-	<div class="push"></div>
-</div>
+	<!--/content-->				
+	</div>
+
+		<div class="push"></div>
+
+	</section>
 
 <footer class="v65-group">
 	
