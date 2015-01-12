@@ -2,7 +2,7 @@
 /* ======================================================================================================				
 	Normalize @ Import File
 ==================================================================================================== */
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -566,7 +566,7 @@ header.main .wrapper {
   }
 }
 .logoWrapper .logo {
-  background: url('../images/inverse-logo.png?1370388472') no-repeat;
+  background: url('../images/inverse-logo.png?1403298218') no-repeat;
   background-size: contain;
   border: 4px solid #000;
   display: block;
@@ -1762,6 +1762,7 @@ a.nivo-nextNav {
 
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
+  font-size: 0;
   text-align: center;
   padding: 15px 0;
 }
@@ -1771,9 +1772,7 @@ a.nivo-nextNav {
   width: 22px;
   height: 22px;
   background: url(../nivo/bullets.png) no-repeat;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+  color: transparent;
   border: 0;
   margin: 0 2px;
 }
