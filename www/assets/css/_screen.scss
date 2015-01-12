@@ -852,7 +852,7 @@ nav{
 		background-size: 100% !important;
 
 		@media screen and (max-width: 1400px) {
-			width: 1400px;
+			max-width: 1400px;
 			background-size: initial !important;
 		}
 
